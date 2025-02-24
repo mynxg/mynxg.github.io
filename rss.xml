@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 05 Feb 2025 16:31:17 GMT</pubDate>
-    <lastBuildDate>Wed, 05 Feb 2025 16:31:17 GMT</lastBuildDate>
+    <pubDate>Mon, 24 Feb 2025 16:21:30 GMT</pubDate>
+    <lastBuildDate>Mon, 24 Feb 2025 16:21:30 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -37,9 +37,9 @@
     <category>快速导航</category>
     <category>编程知识库</category>
     <category>服务器监测</category>
+    <category>linux</category>
     <category>技术文档</category>
     <category>mysql</category>
-    <category>linux</category>
     <category>生活</category>
     <category>window</category>
     <category>Android</category>
@@ -6097,13 +6097,19 @@ idea就会提示找到svn对应的.exe</p>
       <link>https://blog.lxip.top/tool/use-tool/develop-tool.html</link>
       <guid>https://blog.lxip.top/tool/use-tool/develop-tool.html</guid>
       <source url="https://blog.lxip.top/rss.xml">个人常用工具</source>
-      <description>开发工具 gitee Github git Visual Studio Code 主要用来写前端、Go IntelliJ IDEA 2022.3.3 主要用来写java Navicat Premium Lite 17 FinalShell http://www.pdmaner.com/#/ 数据库设计工具 之前叫：CHINER：https://www....</description>
+      <description>以下都是我在使用的软件，都比较不错的 开发工具 gitee Github git idea可视化提交、合并代码还是不错的，其他可以试试sourcetree，我提交文档习惯使用命令方式。 Visual Studio Code 主要用来写前端、Go IntelliJ IDEA 2022.3.3 主要用来写java Navicat Premium Lite ...</description>
       <category>tool</category>
       <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>开发工具</h2>
+      <content:encoded><![CDATA[<blockquote>
+<p>以下都是我在使用的软件，都比较不错的</p>
+</blockquote>
+<h2>开发工具</h2>
 <p><a href="https://gitee.com" target="_blank" rel="noopener noreferrer">gitee</a></p>
 <p><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></p>
 <p>git</p>
+<blockquote>
+<p>idea可视化提交、合并代码还是不错的，其他可以试试sourcetree，我提交文档习惯使用命令方式。</p>
+</blockquote>
 <p>Visual Studio Code</p>
 <blockquote>
 <p>主要用来写前端、Go</p>
@@ -6124,9 +6130,20 @@ idea就会提示找到svn对应的.exe</p>
 <p>接口测试，缺少内存时也使用  <a href="https://reqable.com/zh-CN/" target="_blank" rel="noopener noreferrer">Reqable</a></p>
 </blockquote>
 <p><a href="https://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="noopener noreferrer">JMeter工具</a></p>
+<blockquote>
+<p>接口压测</p>
+</blockquote>
 <p><a href="https://github.com/wireshark/wireshark" target="_blank" rel="noopener noreferrer">wireshark</a></p>
+<blockquote>
+<p>接口、数据抓包等</p>
+</blockquote>
+<h2>设计</h2>
+<p><a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">figma</a></p>
+<blockquote>
+<p>原型图</p>
+</blockquote>
 <h2>办公</h2>
-<p>Windows Terminal</p>
+<p><a href="https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&amp;hl=zh-CN&amp;gl=CN" target="_blank" rel="noopener noreferrer">Windows Terminal</a></p>
 <blockquote>
 <p>window终端、可定制主题</p>
 </blockquote>
@@ -6138,11 +6155,19 @@ idea就会提示找到svn对应的.exe</p>
 <blockquote>
 <p>录屏工具</p>
 </blockquote>
-<p>obs</p>
+<p><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">OBS Studio</a></p>
+<blockquote>
+<p>录屏、直播工具</p>
+</blockquote>
 <p><a href="https://vb-audio.com/Voicemeeter/banana.htm" target="_blank" rel="noopener noreferrer">voicemeeter</a></p>
 <blockquote>
 <p>音频分流</p>
 <p>下载地址：<a href="https://nxg.lanzoul.com/iDQC42me13kd" target="_blank" rel="noopener noreferrer">https://nxg.lanzoul.com/iDQC42me13kd</a></p>
+</blockquote>
+<p>剪映</p>
+<blockquote>
+<p>剪辑视频容易上手，进阶就是要pr</p>
+<p>简单批图就不需要用到ps</p>
 </blockquote>
 <p><a href="https://localsend.org/" target="_blank" rel="noopener noreferrer">LocalSend</a></p>
 <blockquote>
@@ -6156,6 +6181,19 @@ idea就会提示找到svn对应的.exe</p>
 <p>ToDesk</p>
 <p>TIM</p>
 <p>腾讯会议</p>
+<p><a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">Chrome</a></p>
+<p>geek</p>
+<blockquote>
+<p>应用卸载工具，免安装，方便清理对应软件注册表</p>
+</blockquote>
+<p><a href="https://yasuo.360.cn/" target="_blank" rel="noopener noreferrer">360压缩</a></p>
+<blockquote>
+<p>压缩软件，无广告</p>
+</blockquote>
+<p><a href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener noreferrer">Everything</a></p>
+<blockquote>
+<p>全局快速文件查找</p>
+</blockquote>
 <h2>笔记</h2>
 <p><a href="https://obsidian.md/download" target="_blank" rel="noopener noreferrer">obsidian</a></p>
 <blockquote>
@@ -6181,6 +6219,9 @@ idea就会提示找到svn对应的.exe</p>
 </blockquote>
 <p><a href="https://www.cnblogs.com/mynxg" target="_blank" rel="noopener noreferrer">博客园</a></p>
 <p><a href="https://blog.csdn.net/nxg0916" target="_blank" rel="noopener noreferrer">CSDN</a></p>
+<blockquote>
+<p>主要用来记录自己遇到的问题以及解决方法，进阶内容可以在掘金或个人博客中写</p>
+</blockquote>
 <h1>网盘</h1>
 <p><a href="https://www.alipan.com/" target="_blank" rel="noopener noreferrer">阿里云盘 </a></p>
 <p><a href="https://www.lanzou.com" target="_blank" rel="noopener noreferrer">蓝奏云</a></p>
@@ -6225,6 +6266,10 @@ idea就会提示找到svn对应的.exe</p>
 <p>重装系统，支持多种类型的操作系统</p>
 </blockquote>
 <figure><img src="https://www.ventoy.net/static/img/screen/screen_uefi_cn.png?v=4" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p><a href="https://www.diskgenius.cn/" target="_blank" rel="noopener noreferrer">DiskGenius</a></p>
+<blockquote>
+<p>磁盘划分工具，如分D、F盘</p>
+</blockquote>
 <h2>附件</h2>
 <p>重装系统不会，可以参考<br>
 <a href="https://yan-jian.com/U%E7%9B%98%E5%AE%89%E8%A3%85win11%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.html" target="_blank" rel="noopener noreferrer">制作开机启动盘</a></p>
@@ -7246,6 +7291,68 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <p>添加即可解决</p>
 <figure><figcaption>image-20230404223214170</figcaption></figure>
 <p>如未解决可参考：<a href="https://github.com/yanglbme/gitee-pages-action/issues/29" target="_blank" rel="noopener noreferrer">https://github.com/yanglbme/gitee-pages-action/issues/29</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>linux运行jar包</title>
+      <link>https://blog.lxip.top/om/linux/linux%E8%BF%90%E8%A1%8Cjar%E5%8C%85.html</link>
+      <guid>https://blog.lxip.top/om/linux/linux%E8%BF%90%E8%A1%8Cjar%E5%8C%85.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">linux运行jar包</source>
+      <description>一、环境安装 1.JDK安装 这里安装JDK版本jdk-8u11-linux-x64.tar.gz 注：在登录centos服务器之后切换到根（root）目录下 1.在root权限下，在根目录下创建文件夹 切换到/usr/local/java目录下 将该jdk-8u11-linux-x64.tar.gz压缩包上传到当前位置 2.解压jdk-8u11-li...</description>
+      <category>linux</category>
+      <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>一、环境安装</h2>
+<h3>1.JDK安装</h3>
+<p>这里安装JDK版本jdk-8u11-linux-x64.tar.gz</p>
+<p>注：在登录centos服务器之后切换到根（root）目录下</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cd /</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>1.在root权限下，在根目录下创建文件夹</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span> mkdir -p /usr/local/java</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>切换到/usr/local/java目录下</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cd /usr/local/java</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>将该jdk-8u11-linux-x64.tar.gz压缩包上传到当前位置</p>
+<p>2.解压jdk-8u11-linux-x64.tar.gz压缩包</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>tar -zxvf ./jdk-8u11-linux-x64.tar.gz -C /usr/local/java/</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>然后切换到根目录下</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cd /</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>3.编辑Linux系统中环境变量所在文件</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>vi /etc/profile</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>4.在文件最后加入环境变量设置，加入后保存文件</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#set java environment</span></span>
+<span class="line"><span>export JAVA_HOME=/usr/local/java/jdk1.8.0_11 #这是自己的jdk所在位置</span></span>
+<span class="line"><span>export</span></span>
+<span class="line"><span>CLASSPATH=.:$JAVA_HOME/jre/lib/dt.jar:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/jre/lib/tools.jar</span></span>
+<span class="line"><span>export PATH=$PATH:$JAVA_HOME/bin</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>5.让环境变量生效</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>source /etc/profile</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>或</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>source ~/.bashrc</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>6.测试JDK是否已经配置好</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#执行命令</span></span>
+<span class="line"><span>java -version</span></span>
+<span class="line"><span>#显示如下</span></span>
+<span class="line"><span>java version "1.8.0_11"</span></span>
+<span class="line"><span>Java(TM) SE Runtime Environment (build 1.8.0_11-b12)</span></span>
+<span class="line"><span>Java HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#执行命令</span></span>
+<span class="line"><span>javac-version</span></span>
+<span class="line"><span>#显示如下</span></span>
+<span class="line"><span>javac 1.8.0_11</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>二、运行jar包</h2>
+<p>后台运行jar</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>nohup java -jar chatai-data-app.jar &gt;chatai-data-app-log.txt &amp;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>查看项目进程号</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>ps aux | grep chatai-data-app.jar</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>使用命令杀死进程：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kill -9 进程号</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>附件</h2>
+<p>云服务器启动项目：</p>
+<p><a href="https://blog.csdn.net/wsf408908184/article/details/80760791" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/wsf408908184/article/details/80760791</a></p>
+<p>关闭项目：</p>
+<p><a href="https://www.kezez.com/archives/62.html/comment-page-1" target="_blank" rel="noopener noreferrer">https://www.kezez.com/archives/62.html/comment-page-1</a></p>
 ]]></content:encoded>
     </item>
     <item>

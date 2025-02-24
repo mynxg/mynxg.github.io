@@ -3,7 +3,7 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>分享技术、bug、问题解决技巧等</subtitle>
-  <updated>2025-02-05T16:31:17.157Z</updated>
+  <updated>2025-02-24T16:21:30.755Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
@@ -34,9 +34,9 @@
   <category term="快速导航"/>
   <category term="编程知识库"/>
   <category term="服务器监测"/>
+  <category term="linux"/>
   <category term="技术文档"/>
   <category term="mysql"/>
-  <category term="linux"/>
   <category term="生活"/>
   <category term="window"/>
   <category term="Android"/>
@@ -53,7 +53,7 @@
     <title type="text">docker安装umami</title>
     <id>https://blog.lxip.top/om/docker/umami-install.html</id>
     <link href="https://blog.lxip.top/om/docker/umami-install.html"/>
-    <updated>2025-02-05T16:31:17.162Z</updated>
+    <updated>2025-02-24T16:21:30.761Z</updated>
     <summary type="html"><![CDATA[<h2>介绍</h2>
 <p>在众多的分析工具中，有google analyze、baidu analyze、51La等，为什么选择umami呢，原因在于umami可以用于自由部署、网站数据追踪、埋点等，数据可以掌握在自己手中，或者说灵活度更高，可以接入个人站点中展示网站访问情况。</p>
 <p>umami优点：</p>
@@ -251,7 +251,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">Ubicloud替代github action</title>
     <id>https://blog.lxip.top/messing/workflow/Ubicloud%E6%9B%BF%E4%BB%A3github%20action.html</id>
     <link href="https://blog.lxip.top/messing/workflow/Ubicloud%E6%9B%BF%E4%BB%A3github%20action.html"/>
-    <updated>2025-02-05T16:31:17.177Z</updated>
+    <updated>2025-02-24T16:21:30.774Z</updated>
     <summary type="html"><![CDATA[<h2>为什么使用Ubicloud</h2>
 <p>GitHub Action 工作流程与 Ubicloud 运行器集成</p>
 <p>Ubicloud文档：<a href="https://www.ubicloud.com/docs/github-actions-integration/quickstart" target="_blank" rel="noopener noreferrer">https://www.ubicloud.com/docs/github-actions-integration/quickstart</a></p>
@@ -292,7 +292,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">Node环境配置</title>
     <id>https://blog.lxip.top/web/node/Node%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html</id>
     <link href="https://blog.lxip.top/web/node/Node%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2025-02-05T16:31:17.182Z</updated>
+    <updated>2025-02-24T16:21:30.777Z</updated>
     <summary type="html"><![CDATA[<h2>Node安装</h2>
 <blockquote>
 <p>使用nvm安装，跳过</p>
@@ -350,7 +350,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">必备软件</title>
     <id>https://blog.lxip.top/messing/archlinux/%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6.html</id>
     <link href="https://blog.lxip.top/messing/archlinux/%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6.html"/>
-    <updated>2025-02-05T16:31:17.199Z</updated>
+    <updated>2025-02-24T16:21:30.788Z</updated>
     <summary type="html"><![CDATA[<p>linux软件：</p>
 <p><a href="https://imnxg.notion.site/Linux-10c8b8600cef8038a2a1f145d6d55c73?pvs=74" target="_blank" rel="noopener noreferrer">https://imnxg.notion.site/Linux-10c8b8600cef8038a2a1f145d6d55c73?pvs=74</a></p>
 <p>linux软件导航：</p>
@@ -479,7 +479,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">archlinux常用命令</title>
     <id>https://blog.lxip.top/messing/archlinux/archlinux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/messing/archlinux/archlinux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2025-02-05T16:31:17.207Z</updated>
+    <updated>2025-02-24T16:21:30.809Z</updated>
     <summary type="html"><![CDATA[<p>包管理：pacman 、yay、paru</p>
 <blockquote>
 <p>安装 Aur 中的软件包 (囊括了官方的仓库)，推荐使用 <code>paru</code>。二者使用方法一致，唯一的区别就是 <code>paru</code> 不需要在命令前加上 <code>sudo</code>，一般是等后面有提示的时候再输入密码。</p>
@@ -522,7 +522,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">01-arhclinux安装及主题配置</title>
     <id>https://blog.lxip.top/messing/archlinux/01-arhclinux%E5%AE%89%E8%A3%85%E5%8F%8A%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html</id>
     <link href="https://blog.lxip.top/messing/archlinux/01-arhclinux%E5%AE%89%E8%A3%85%E5%8F%8A%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2025-02-05T16:31:17.213Z</updated>
+    <updated>2025-02-24T16:21:30.820Z</updated>
     <summary type="html"><![CDATA[<p>提前准备好能访问github的局域网wifi环境</p>
 <blockquote>
 <p>即任何设备连接局域网wifi都能正常访问google\github等</p>
@@ -606,7 +606,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">02-hyprland主题使用</title>
     <id>https://blog.lxip.top/messing/archlinux/02-hyprland.html</id>
     <link href="https://blog.lxip.top/messing/archlinux/02-hyprland.html"/>
-    <updated>2025-02-05T16:31:17.221Z</updated>
+    <updated>2025-02-24T16:21:30.828Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>参考：hyperland安装：</p>
 <p><a href="https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-qin-ce-ke-yong" target="_blank" rel="noopener noreferrer">https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-qin-ce-ke-yong</a></p>
@@ -870,7 +870,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">准备工作</title>
     <id>https://blog.lxip.top/messing/archlinux/%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.html</id>
     <link href="https://blog.lxip.top/messing/archlinux/%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.html"/>
-    <updated>2025-02-05T16:31:17.247Z</updated>
+    <updated>2025-02-24T16:21:30.872Z</updated>
     <summary type="html"><![CDATA[<h2>前提</h2>
 <p>archlinux  镜像下载：</p>
 <p><a href="https://mirrors.bfsu.edu.cn/archlinux/iso/2024.09.01/" target="_blank" rel="noopener noreferrer">https://mirrors.bfsu.edu.cn/archlinux/iso/2024.09.01/</a></p>
@@ -937,7 +937,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">vscode运行go</title>
     <id>https://blog.lxip.top/go/install/vscode%E8%BF%90%E8%A1%8Cgo.html</id>
     <link href="https://blog.lxip.top/go/install/vscode%E8%BF%90%E8%A1%8Cgo.html"/>
-    <updated>2025-02-05T16:31:17.252Z</updated>
+    <updated>2025-02-24T16:21:30.880Z</updated>
     <summary type="html"><![CDATA[<h2>配置 VSCode 开发环境</h2>
 <blockquote>
 <p>这里使用的是 VSCode 进行开发</p>
@@ -989,7 +989,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">go安装</title>
     <id>https://blog.lxip.top/go/install/go%E5%AE%89%E8%A3%85.html</id>
     <link href="https://blog.lxip.top/go/install/go%E5%AE%89%E8%A3%85.html"/>
-    <updated>2025-02-05T16:31:17.256Z</updated>
+    <updated>2025-02-24T16:21:30.884Z</updated>
     <summary type="html"><![CDATA[<p>下载Go</p>
 <p>下载地址：<a href="https://studygolang.com/dl" target="_blank" rel="noopener noreferrer">https://studygolang.com/dl</a></p>
 <figure><figcaption></figcaption></figure>
@@ -1024,7 +1024,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">go-window环境安装（推荐）</title>
     <id>https://blog.lxip.top/go/install/go-window%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85(%E6%8E%A8%E8%8D%90).html</id>
     <link href="https://blog.lxip.top/go/install/go-window%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85(%E6%8E%A8%E8%8D%90).html"/>
-    <updated>2025-02-05T16:31:17.261Z</updated>
+    <updated>2025-02-24T16:21:30.886Z</updated>
     <summary type="html"><![CDATA[<p>下载安装包</p>
 <p><a href="https://go.dev/learn/" target="_blank" rel="noopener noreferrer">https://go.dev/learn/</a></p>
 <figure><figcaption></figcaption></figure>
@@ -1134,7 +1134,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">frp-0.59-使用教程</title>
     <id>https://blog.lxip.top/messing/softguide/frp-0.59-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html</id>
     <link href="https://blog.lxip.top/messing/softguide/frp-0.59-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"/>
-    <updated>2025-02-05T16:31:17.296Z</updated>
+    <updated>2025-02-24T16:21:30.896Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>目前需要使用自建的内网穿透工具，就选择了frp，frp也分很多版本，我之前使用的是frp_0.51.2_windows_386版本，现在升级版本为frp_0.59.0_windows_amd64，主要使用这个frp功能有，点对点内网穿透（p2p）、安全地暴露内网服务 和 服务端作为代理进行穿透的三种方式。准备使用点对点或安全的暴露服务方式，之前使用的一直是服务器代理的方式进行内网穿透，这样直接将自己的机器暴露在公网上，非常不安全，有一次我检查服务器日志，发现很多请求我服务器暴露的这个端口，意识到可能被盯上了，就改换了其他端口。现在加强安全意识，就换用点对点或者安全的暴露方式，攻击者的扫描和入侵。建议不使用服务提供的默认端口，自行进行修改。</p>]]></summary>
     <content type="html"><![CDATA[<h2>背景</h2>
@@ -1358,7 +1358,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">frp-0.59-点对点和安全暴露服务</title>
     <id>https://blog.lxip.top/messing/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1.html</id>
     <link href="https://blog.lxip.top/messing/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1.html"/>
-    <updated>2025-02-05T16:31:17.320Z</updated>
+    <updated>2025-02-24T16:21:30.922Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>目前需要使用自建的内网穿透工具，就选择了frp，frp也分很多版本，我之前使用的是frp_0.51.2_windows_386版本，现在升级版本为frp_0.59.0_windows_amd64，主要使用这个frp功能有，点对点内网穿透（p2p）、安全地暴露内网服务 和 服务端作为代理进行穿透的三种方式。准备使用点对点或安全的暴露服务方式，之前使用的一直是服务器代理的方式进行内网穿透，这样直接将自己的机器暴露在公网上，非常不安全，有一次我检查服务器日志，发现很多请求我服务器暴露的这个端口，意识到可能被盯上了，就改换了其他端口。现在加强安全意识，就换用点对点或者安全的暴露方式，攻击者的扫描和入侵。建议不使用服务提供的默认端口，自行进行修改。</p>]]></summary>
     <content type="html"><![CDATA[<h2>背景</h2>
@@ -1529,7 +1529,7 @@ POSTGRES_PASSWORD: 密码</p>
     <title type="text">5-Node安装及配置</title>
     <id>https://blog.lxip.top/java/pracprojects/lamp-project/5-Node%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</id>
     <link href="https://blog.lxip.top/java/pracprojects/lamp-project/5-Node%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2025-02-05T16:31:17.345Z</updated>
+    <updated>2025-02-24T16:21:30.948Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>这里就直接写nvm安装node教程，不再写node的安装教程</p>
 </blockquote>
@@ -1599,7 +1599,7 @@ npm</p>
     <title type="text">4-seata-2.0.0-安装及配置</title>
     <id>https://blog.lxip.top/java/pracprojects/lamp-project/4-seata-2.0.0-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</id>
     <link href="https://blog.lxip.top/java/pracprojects/lamp-project/4-seata-2.0.0-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2025-02-05T16:31:17.370Z</updated>
+    <updated>2025-02-24T16:21:30.960Z</updated>
     <summary type="html"><![CDATA[<h2>一、准备工作</h2>
 <p>下载地址：<a href="https://seata.apache.org/zh-cn/unversioned/download/seata-server/" target="_blank" rel="noopener noreferrer">https://seata.apache.org/zh-cn/unversioned/download/seata-server/</a></p>
 <blockquote>
@@ -2015,7 +2015,7 @@ npm</p>
     <title type="text">3-nacos-server-2.3.2-安装及配置</title>
     <id>https://blog.lxip.top/java/pracprojects/lamp-project/3-nacos-server-2.3.2-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</id>
     <link href="https://blog.lxip.top/java/pracprojects/lamp-project/3-nacos-server-2.3.2-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2025-02-05T16:31:17.480Z</updated>
+    <updated>2025-02-24T16:21:31.105Z</updated>
     <summary type="html"><![CDATA[<h2>一、准备工作</h2>
 <p>下载地址：<a href="https://github.com/alibaba/nacos/releases" target="_blank" rel="noopener noreferrer">https://github.com/alibaba/nacos/releases</a></p>
 <p>nacos官网：<a href="https://nacos.io/download/release-history/" target="_blank" rel="noopener noreferrer">https://nacos.io/download/release-history/</a></p>]]></summary>
@@ -2600,7 +2600,7 @@ npm</p>
     <title type="text">2-Redis安装及配置</title>
     <id>https://blog.lxip.top/java/pracprojects/lamp-project/2-Redis%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</id>
     <link href="https://blog.lxip.top/java/pracprojects/lamp-project/2-Redis%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2025-02-05T16:31:17.543Z</updated>
+    <updated>2025-02-24T16:21:31.155Z</updated>
     <summary type="html"><![CDATA[<h2>一、准备工作</h2>
 <p>redis版本下载：<a href="https://redis.io/downloads/" target="_blank" rel="noopener noreferrer">https://redis.io/downloads/</a></p>
 <blockquote>
@@ -2911,7 +2911,7 @@ npm</p>
     <title type="text">1-Mysql8安装及配置</title>
     <id>https://blog.lxip.top/java/pracprojects/lamp-project/1-Mysql8%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</id>
     <link href="https://blog.lxip.top/java/pracprojects/lamp-project/1-Mysql8%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2025-02-05T16:31:17.605Z</updated>
+    <updated>2025-02-24T16:21:31.224Z</updated>
     <summary type="html"><![CDATA[<h2>一、准备工作</h2>
 <blockquote>
 <p>这使用绿色版进行安装mysql8<br>
@@ -3024,7 +3024,7 @@ npm</p>
     <title type="text">0-环境安装-整体</title>
     <id>https://blog.lxip.top/java/pracprojects/lamp-project/0-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E6%95%B4%E4%BD%93.html</id>
     <link href="https://blog.lxip.top/java/pracprojects/lamp-project/0-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E6%95%B4%E4%BD%93.html"/>
-    <updated>2025-02-05T16:31:17.610Z</updated>
+    <updated>2025-02-24T16:21:31.234Z</updated>
     <summary type="html"><![CDATA[<h3>mysql</h3>
 <p>mysql8绿色安装教程：</p>
 <p><a href="https://blog.csdn.net/qq_58608526/article/details/134408777" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_58608526/article/details/134408777</a></p>
@@ -3167,7 +3167,7 @@ npm</p>
     <title type="text">lamp-cloud-项目熟悉</title>
     <id>https://blog.lxip.top/java/pracprojects/lamp-project/lamp-cloud-%E9%A1%B9%E7%9B%AE%E7%86%9F%E6%82%89.html</id>
     <link href="https://blog.lxip.top/java/pracprojects/lamp-project/lamp-cloud-%E9%A1%B9%E7%9B%AE%E7%86%9F%E6%82%89.html"/>
-    <updated>2025-02-05T16:31:17.626Z</updated>
+    <updated>2025-02-24T16:21:31.247Z</updated>
     <summary type="html"><![CDATA[<h2>一、项目地址</h2>
 <blockquote>
 <p>本项目统一使用master分支，lamp-cloud mater分支版本是3.10.0</p>
@@ -3463,7 +3463,7 @@ Swagger文档: 		<a href="http://192.168.1.79:8773/doc.html" target="_blank" rel
     <title type="text">window下配置ssh</title>
     <id>https://blog.lxip.top/java/git/window%E4%B8%8B%E9%85%8D%E7%BD%AEssh.html</id>
     <link href="https://blog.lxip.top/java/git/window%E4%B8%8B%E9%85%8D%E7%BD%AEssh.html"/>
-    <updated>2025-02-05T16:31:17.653Z</updated>
+    <updated>2025-02-24T16:21:31.281Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>在window下使用git，我习惯使用ssh方式进行拉取推送代码，其他方式流程就没有这么繁琐了。为什么使用SSH方式呢，我不想每次切换不同账号的时候重复输入密码，像github不支持直接输入密码，建议使用ssh方式。gitlab、云效等支持输入访问令牌方式连接远程仓库。</p>
 <h2>ssh配置</h2>
@@ -3567,7 +3567,7 @@ Swagger文档: 		<a href="http://192.168.1.79:8773/doc.html" target="_blank" rel
     <title type="text">SpringBoot整合xxx-job</title>
     <id>https://blog.lxip.top/java/projectintegration/SpringBoot%E6%95%B4%E5%90%88xxx-job.html</id>
     <link href="https://blog.lxip.top/java/projectintegration/SpringBoot%E6%95%B4%E5%90%88xxx-job.html"/>
-    <updated>2025-02-05T16:31:17.665Z</updated>
+    <updated>2025-02-24T16:21:31.313Z</updated>
     <summary type="html"><![CDATA[<h2>SpringBoot整合xxl-job</h2>
 <blockquote>
 <p>前提是本地或者远程启动了xxl-job服务</p>
@@ -3752,7 +3752,7 @@ SampleXxlJob类：</p>
     <title type="text">SpringBoot整合Knife4j</title>
     <id>https://blog.lxip.top/java/projectintegration/SpringBoot%E6%95%B4%E5%90%88Knife4j.html</id>
     <link href="https://blog.lxip.top/java/projectintegration/SpringBoot%E6%95%B4%E5%90%88Knife4j.html"/>
-    <updated>2025-02-05T16:31:17.722Z</updated>
+    <updated>2025-02-24T16:21:31.360Z</updated>
     <summary type="html"><![CDATA[<h2>介绍</h2>
 <p>Knife4j 是 <strong>springfox 3.0.0</strong> 和 <strong>springdoc-openapi</strong> 的增强。</p>
 <blockquote>
@@ -3873,7 +3873,7 @@ SampleXxlJob类：</p>
     <title type="text">eclipse-卡顿问题</title>
     <id>https://blog.lxip.top/java/workquestions/eclipse-%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/java/workquestions/eclipse-%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html"/>
-    <updated>2025-02-05T16:31:17.730Z</updated>
+    <updated>2025-02-24T16:21:31.388Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>2024-05-20</p>
 </blockquote>
@@ -3918,7 +3918,7 @@ SampleXxlJob类：</p>
     <title type="text">git指定单文件提交</title>
     <id>https://blog.lxip.top/java/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</id>
     <link href="https://blog.lxip.top/java/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html"/>
-    <updated>2025-02-05T16:31:17.743Z</updated>
+    <updated>2025-02-24T16:21:31.393Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>在使用idea提交文件时，当提交大文件或者文件数量过多时，你想要提交文件是提交不上去的，这样在idea设置中也可以解决，但是有时候并不方便，于是就有了使用git指定文件提交的方式来解决idea提交问题。</p>
 <h2>基本命令操作</h2>
@@ -3962,7 +3962,7 @@ SampleXxlJob类：</p>
     <title type="text">eclipse引入lombok不生效问题</title>
     <id>https://blog.lxip.top/java/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/java/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html"/>
-    <updated>2025-02-05T16:31:17.745Z</updated>
+    <updated>2025-02-24T16:21:31.395Z</updated>
     <summary type="html"><![CDATA[<h2>遇到的问题</h2>
 <p>在eclipse中使用lombok，省get/set方法，但是在新的环境中引入lombok.jar包并不生效，代码中有get方法就会飘红。</p>
 <p>原因：lombok在项目中没有生效，get/set也就没有。</p>
@@ -4066,7 +4066,7 @@ SampleXxlJob类：</p>
     <title type="text">项目打包之java compiled by a more recent version of the Java Runtime (class file version 61.0)</title>
     <id>https://blog.lxip.top/java/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/java/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html"/>
-    <updated>2025-02-05T16:31:17.749Z</updated>
+    <updated>2025-02-24T16:21:31.410Z</updated>
     <summary type="html"><![CDATA[<p>背景</p>
 <p>使用2023年最新版本的idea编译器、JDK1.8，可以正常启动项目SpringBoot项目，使用maven插件打包项目时报错。</p>
 <h2>遇到的问题：</h2>
@@ -4118,7 +4118,7 @@ SampleXxlJob类：</p>
     <title type="text">maven私服批量上传本地依赖</title>
     <id>https://blog.lxip.top/java/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</id>
     <link href="https://blog.lxip.top/java/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html"/>
-    <updated>2025-02-05T16:31:17.753Z</updated>
+    <updated>2025-02-24T16:21:31.414Z</updated>
     <summary type="html"><![CDATA[<h2>maven本地仓库依赖上传到远程仓库</h2>
 <blockquote>
 <p>本地仓库上传到远程仓库</p>
@@ -4193,7 +4193,7 @@ SampleXxlJob类：</p>
     <title type="text">maven私服搭建教程</title>
     <id>https://blog.lxip.top/java/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</id>
     <link href="https://blog.lxip.top/java/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html"/>
-    <updated>2025-02-05T16:31:17.757Z</updated>
+    <updated>2025-02-24T16:21:31.422Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>sonatype-nexus私服搭建</p>
 </blockquote>
@@ -4246,7 +4246,7 @@ sonatype-work</p>
     <title type="text">mac配置gitlab</title>
     <id>https://blog.lxip.top/java/git/mac%E9%85%8D%E7%BD%AEgitlab.html</id>
     <link href="https://blog.lxip.top/java/git/mac%E9%85%8D%E7%BD%AEgitlab.html"/>
-    <updated>2025-02-05T16:31:17.759Z</updated>
+    <updated>2025-02-24T16:21:31.426Z</updated>
     <summary type="html"><![CDATA[<p>使用ssh方式拉取gitlab仓库代码</p>
 <h2>背景</h2>
 <p>在公司mac电脑上需要将gitee仓库代码迁移到公司gitlab代码仓库中，而我习惯使用ssh方式关联git仓库。我也喜欢使用下面简单粗暴的方式来配置git，之前玩git在window10系统上玩的比较多，各种操作都玩过，比如：创建分支、切换分支、分支代码合并、单文件历史查看、当前文件与上一个版本文件进行比对、各个分支各自的用处等。<br>
@@ -4336,7 +4336,7 @@ config文件</p>
     <title type="text">gitlab导入本地或远程仓库代码</title>
     <id>https://blog.lxip.top/java/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/java/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2025-02-05T16:31:17.771Z</updated>
+    <updated>2025-02-24T16:21:31.432Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>gitee仓库项目迁移到gitlab仓库</p>
 </blockquote>
@@ -4433,7 +4433,7 @@ config文件</p>
     <title type="text">idea中文乱码问题</title>
     <id>https://blog.lxip.top/java/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/java/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html"/>
-    <updated>2025-02-05T16:31:17.774Z</updated>
+    <updated>2025-02-24T16:21:31.450Z</updated>
     <summary type="html"><![CDATA[<p>背景<br>
 在idea2022版本中运行项目时，server控制台中文出现乱码。之前解决的是在debug时，返回的数据中的中文乱码，原因是tomcat8.5的编码问题，在edit  configurations中找到vm options并添加设置UTF-8即可解决。而这并不能解决控制台中文乱码，网上多数都是说改这改那，但并没有解决自己的需求。</p>
 <h2>遇到问题</h2>
@@ -4471,7 +4471,7 @@ config文件</p>
     <title type="text">项目中文乱码</title>
     <id>https://blog.lxip.top/java/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/java/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html"/>
-    <updated>2025-02-05T16:31:17.776Z</updated>
+    <updated>2025-02-24T16:21:31.453Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>在spring大杂烩项目中，调用第三方接口时，出现中文乱码。<br>
 这里使用到spring、springmvc、本地tomcat、idea</p>
@@ -4508,7 +4508,7 @@ tomcat字符集问题</p>
     <title type="text">eclipse-内存问题</title>
     <id>https://blog.lxip.top/java/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/java/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html"/>
-    <updated>2025-02-05T16:31:17.777Z</updated>
+    <updated>2025-02-24T16:21:31.456Z</updated>
     <summary type="html"><![CDATA[<h2>启动超时问题</h2>
 <p>对tomcat启动项目，将超时时间（timeouts）延迟</p>
 <h2>tomcat6内存问题</h2>
@@ -4547,7 +4547,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">问题集-插件类</title>
     <id>https://blog.lxip.top/java/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</id>
     <link href="https://blog.lxip.top/java/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html"/>
-    <updated>2025-02-05T16:31:17.779Z</updated>
+    <updated>2025-02-24T16:21:31.459Z</updated>
     <summary type="html"><![CDATA[<h2>lombok在eclipse中不生效问题</h2>
 <p>遇到的问题</p>
 <p>lombok在eclipse中不生效，使用了@Data注解无法调用set/get方法</p>
@@ -4583,7 +4583,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">老项目导入问题</title>
     <id>https://blog.lxip.top/java/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/java/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html"/>
-    <updated>2025-02-05T16:31:17.782Z</updated>
+    <updated>2025-02-24T16:21:31.467Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>导入eclipse项目，可能就会遇到这样那样的问题</p>
 <p>比如 该项目时jdk1.7版本的老项目</p>
@@ -4616,7 +4616,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">Oracle之ORA-29275-部分多字节字符</title>
     <id>https://blog.lxip.top/java/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</id>
     <link href="https://blog.lxip.top/java/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html"/>
-    <updated>2025-02-05T16:31:17.785Z</updated>
+    <updated>2025-02-24T16:21:31.470Z</updated>
     <summary type="html"><![CDATA[<p>背景：<br>
 在Oracle数据库中，通过查询 A表所有数据，发现某个字段出现字符问题</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>SELECT * FROM  A</span></span></code></pre>
@@ -4672,7 +4672,7 @@ to_single_byte(c)转换成半角</p>
     <title type="text">maven之‘settings.xml‘-has-syntax-errors</title>
     <id>https://blog.lxip.top/java/workquestions/maven%E4%B9%8B-settings.xml-has-syntax-errors.html</id>
     <link href="https://blog.lxip.top/java/workquestions/maven%E4%B9%8B-settings.xml-has-syntax-errors.html"/>
-    <updated>2025-02-05T16:31:17.788Z</updated>
+    <updated>2025-02-24T16:21:31.476Z</updated>
     <summary type="html"><![CDATA[<p>背景：<br>
 在springboot项目中拉取依赖，出现oracle对应的依赖不存在或没找到，如下所示：</p>
 <blockquote>
@@ -5029,7 +5029,7 @@ to_single_byte(c)转换成半角</p>
     <title type="text">eclipse项目在idea中打开</title>
     <id>https://blog.lxip.top/java/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/java/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2025-02-05T16:31:17.828Z</updated>
+    <updated>2025-02-24T16:21:31.528Z</updated>
     <summary type="html"><![CDATA[<p>首先拿到项目地址：</p>
 <p>使用svn拉到本地目录位置（自定义）</p>
 <h2>背景</h2>
@@ -5150,7 +5150,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">工作必会工具</title>
     <id>https://blog.lxip.top/java/devtool/front-dev-tool.html</id>
     <link href="https://blog.lxip.top/java/devtool/front-dev-tool.html"/>
-    <updated>2025-02-05T16:31:17.834Z</updated>
+    <updated>2025-02-24T16:21:31.535Z</updated>
     <summary type="html"><![CDATA[<h2>git</h2>
 <blockquote>
 <p>Gitee、GitHub、GitLab、Gitcode</p>
@@ -5218,7 +5218,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">常用工具</title>
     <id>https://blog.lxip.top/java/devtool/use-tool.html</id>
     <link href="https://blog.lxip.top/java/devtool/use-tool.html"/>
-    <updated>2025-02-05T16:31:17.839Z</updated>
+    <updated>2025-02-24T16:21:31.537Z</updated>
     <summary type="html"><![CDATA[<p>云效</p>
 <blockquote>
 <p>阿里云云效git代码管理仓库<br>
@@ -5262,7 +5262,7 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     <title type="text">docker之xxl-job</title>
     <id>https://blog.lxip.top/om/docker/docker%E4%B9%8Bxxl-job.html</id>
     <link href="https://blog.lxip.top/om/docker/docker%E4%B9%8Bxxl-job.html"/>
-    <updated>2025-02-05T16:31:17.842Z</updated>
+    <updated>2025-02-24T16:21:31.538Z</updated>
     <summary type="html"><![CDATA[<h2>xxl-job</h2>
 <p>拉取镜像：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker pull xuxueli/xxl-job-admin:2.3.1</span></span></code></pre>
@@ -5391,7 +5391,7 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     <title type="text">docker安装Oracle容器</title>
     <id>https://blog.lxip.top/om/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</id>
     <link href="https://blog.lxip.top/om/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html"/>
-    <updated>2025-02-05T16:31:17.863Z</updated>
+    <updated>2025-02-24T16:21:31.557Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>使用docker方式手动方式安装各类容器（服务）</p>
 </blockquote>
@@ -5516,7 +5516,7 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     <title type="text">xxl-job使用</title>
     <id>https://blog.lxip.top/java/projectintegration/xxl-job%E4%BD%BF%E7%94%A8.html</id>
     <link href="https://blog.lxip.top/java/projectintegration/xxl-job%E4%BD%BF%E7%94%A8.html"/>
-    <updated>2025-02-05T16:31:17.885Z</updated>
+    <updated>2025-02-24T16:21:31.569Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>这里使用xxl-job-admin 2.3.1版本做演示</p>
 </blockquote>
@@ -5684,7 +5684,7 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     <title type="text">spring项目整合xxl-job</title>
     <id>https://blog.lxip.top/java/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</id>
     <link href="https://blog.lxip.top/java/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html"/>
-    <updated>2025-02-05T16:31:17.904Z</updated>
+    <updated>2025-02-24T16:21:31.588Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。</p>
 <h2>准备工作</h2>
@@ -5936,7 +5936,7 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     <title type="text">熟悉项目 &amp; idea导入eclipse项目</title>
     <id>https://blog.lxip.top/java/install/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/java/install/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2025-02-05T16:31:17.928Z</updated>
+    <updated>2025-02-24T16:21:31.615Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
 <h2>开发工具的选择</h2>
@@ -6056,7 +6056,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">Cloudfare和Telegraph-Image-实现图床搭建</title>
     <id>https://blog.lxip.top/messing/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</id>
     <link href="https://blog.lxip.top/messing/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html"/>
-    <updated>2025-02-05T16:31:17.934Z</updated>
+    <updated>2025-02-24T16:21:31.621Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。</p>
 <p>核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔</p>
@@ -6107,7 +6107,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">frp实现p2p远程连接桌面</title>
     <id>https://blog.lxip.top/messing/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</id>
     <link href="https://blog.lxip.top/messing/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html"/>
-    <updated>2025-02-05T16:31:17.940Z</updated>
+    <updated>2025-02-24T16:21:31.629Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。</p>
 <blockquote>
@@ -6286,7 +6286,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">frp-p2p配置说明</title>
     <id>https://blog.lxip.top/messing/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</id>
     <link href="https://blog.lxip.top/messing/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
-    <updated>2025-02-05T16:31:17.959Z</updated>
+    <updated>2025-02-24T16:21:31.650Z</updated>
     <summary type="html"><![CDATA[<h2>标准的配置文件</h2>
 <p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
 <p>被访问者：frpc.ini</p>
@@ -6518,7 +6518,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">mybatis传数值问题</title>
     <id>https://blog.lxip.top/java/workquestions/mybatis-question.html</id>
     <link href="https://blog.lxip.top/java/workquestions/mybatis-question.html"/>
-    <updated>2025-02-05T16:31:17.980Z</updated>
+    <updated>2025-02-24T16:21:31.673Z</updated>
     <summary type="html"><![CDATA[<p>mybatis传数值问题：</p>
 <blockquote>
 <p>当传 0时，mybatis默认会处理为空串</p>
@@ -6548,20 +6548,27 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">个人常用工具</title>
     <id>https://blog.lxip.top/tool/use-tool/develop-tool.html</id>
     <link href="https://blog.lxip.top/tool/use-tool/develop-tool.html"/>
-    <updated>2025-02-05T16:31:17.981Z</updated>
-    <summary type="html"><![CDATA[<h2>开发工具</h2>
-<p><a href="https://gitee.com" target="_blank" rel="noopener noreferrer">gitee</a></p>
-<p><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></p>
-<p>git</p>
-<p>Visual Studio Code</p>
-<blockquote>
-<p>主要用来写前端、Go</p>
+    <updated>2025-02-24T16:21:31.674Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>以下都是我在使用的软件，都比较不错的</p>
 </blockquote>
-<p>IntelliJ IDEA 2022.3.3</p>]]></summary>
-    <content type="html"><![CDATA[<h2>开发工具</h2>
+<h2>开发工具</h2>
 <p><a href="https://gitee.com" target="_blank" rel="noopener noreferrer">gitee</a></p>
 <p><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></p>
 <p>git</p>
+<blockquote>
+<p>idea可视化提交、合并代码还是不错的，其他可以试试sourcetree，我提交文档习惯使用命令方式。</p>
+</blockquote>]]></summary>
+    <content type="html"><![CDATA[<blockquote>
+<p>以下都是我在使用的软件，都比较不错的</p>
+</blockquote>
+<h2>开发工具</h2>
+<p><a href="https://gitee.com" target="_blank" rel="noopener noreferrer">gitee</a></p>
+<p><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></p>
+<p>git</p>
+<blockquote>
+<p>idea可视化提交、合并代码还是不错的，其他可以试试sourcetree，我提交文档习惯使用命令方式。</p>
+</blockquote>
 <p>Visual Studio Code</p>
 <blockquote>
 <p>主要用来写前端、Go</p>
@@ -6582,9 +6589,20 @@ idea就会提示找到svn对应的.exe</p>
 <p>接口测试，缺少内存时也使用  <a href="https://reqable.com/zh-CN/" target="_blank" rel="noopener noreferrer">Reqable</a></p>
 </blockquote>
 <p><a href="https://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="noopener noreferrer">JMeter工具</a></p>
+<blockquote>
+<p>接口压测</p>
+</blockquote>
 <p><a href="https://github.com/wireshark/wireshark" target="_blank" rel="noopener noreferrer">wireshark</a></p>
+<blockquote>
+<p>接口、数据抓包等</p>
+</blockquote>
+<h2>设计</h2>
+<p><a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">figma</a></p>
+<blockquote>
+<p>原型图</p>
+</blockquote>
 <h2>办公</h2>
-<p>Windows Terminal</p>
+<p><a href="https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&amp;hl=zh-CN&amp;gl=CN" target="_blank" rel="noopener noreferrer">Windows Terminal</a></p>
 <blockquote>
 <p>window终端、可定制主题</p>
 </blockquote>
@@ -6596,11 +6614,19 @@ idea就会提示找到svn对应的.exe</p>
 <blockquote>
 <p>录屏工具</p>
 </blockquote>
-<p>obs</p>
+<p><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">OBS Studio</a></p>
+<blockquote>
+<p>录屏、直播工具</p>
+</blockquote>
 <p><a href="https://vb-audio.com/Voicemeeter/banana.htm" target="_blank" rel="noopener noreferrer">voicemeeter</a></p>
 <blockquote>
 <p>音频分流</p>
 <p>下载地址：<a href="https://nxg.lanzoul.com/iDQC42me13kd" target="_blank" rel="noopener noreferrer">https://nxg.lanzoul.com/iDQC42me13kd</a></p>
+</blockquote>
+<p>剪映</p>
+<blockquote>
+<p>剪辑视频容易上手，进阶就是要pr</p>
+<p>简单批图就不需要用到ps</p>
 </blockquote>
 <p><a href="https://localsend.org/" target="_blank" rel="noopener noreferrer">LocalSend</a></p>
 <blockquote>
@@ -6614,6 +6640,19 @@ idea就会提示找到svn对应的.exe</p>
 <p>ToDesk</p>
 <p>TIM</p>
 <p>腾讯会议</p>
+<p><a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">Chrome</a></p>
+<p>geek</p>
+<blockquote>
+<p>应用卸载工具，免安装，方便清理对应软件注册表</p>
+</blockquote>
+<p><a href="https://yasuo.360.cn/" target="_blank" rel="noopener noreferrer">360压缩</a></p>
+<blockquote>
+<p>压缩软件，无广告</p>
+</blockquote>
+<p><a href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener noreferrer">Everything</a></p>
+<blockquote>
+<p>全局快速文件查找</p>
+</blockquote>
 <h2>笔记</h2>
 <p><a href="https://obsidian.md/download" target="_blank" rel="noopener noreferrer">obsidian</a></p>
 <blockquote>
@@ -6639,6 +6678,9 @@ idea就会提示找到svn对应的.exe</p>
 </blockquote>
 <p><a href="https://www.cnblogs.com/mynxg" target="_blank" rel="noopener noreferrer">博客园</a></p>
 <p><a href="https://blog.csdn.net/nxg0916" target="_blank" rel="noopener noreferrer">CSDN</a></p>
+<blockquote>
+<p>主要用来记录自己遇到的问题以及解决方法，进阶内容可以在掘金或个人博客中写</p>
+</blockquote>
 <h1>网盘</h1>
 <p><a href="https://www.alipan.com/" target="_blank" rel="noopener noreferrer">阿里云盘 </a></p>
 <p><a href="https://www.lanzou.com" target="_blank" rel="noopener noreferrer">蓝奏云</a></p>
@@ -6658,7 +6700,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">window电脑检测工具</title>
     <id>https://blog.lxip.top/tool/share/window-tool.html</id>
     <link href="https://blog.lxip.top/tool/share/window-tool.html"/>
-    <updated>2025-02-05T16:31:17.984Z</updated>
+    <updated>2025-02-24T16:21:31.678Z</updated>
     <summary type="html"><![CDATA[<p>crystalmark</p>
 <p><a href="https://crystalmark.info/en/download/" target="_blank" rel="noopener noreferrer">https://crystalmark.info/</a></p>
 <blockquote>
@@ -6688,6 +6730,10 @@ idea就会提示找到svn对应的.exe</p>
 <p>重装系统，支持多种类型的操作系统</p>
 </blockquote>
 <figure><img src="https://www.ventoy.net/static/img/screen/screen_uefi_cn.png?v=4" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p><a href="https://www.diskgenius.cn/" target="_blank" rel="noopener noreferrer">DiskGenius</a></p>
+<blockquote>
+<p>磁盘划分工具，如分D、F盘</p>
+</blockquote>
 <h2>附件</h2>
 <p>重装系统不会，可以参考<br>
 <a href="https://yan-jian.com/U%E7%9B%98%E5%AE%89%E8%A3%85win11%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.html" target="_blank" rel="noopener noreferrer">制作开机启动盘</a></p>
@@ -6701,7 +6747,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">网站分析</title>
     <id>https://blog.lxip.top/tool/use-tool/web-analysis.html</id>
     <link href="https://blog.lxip.top/tool/use-tool/web-analysis.html"/>
-    <updated>2025-02-05T16:31:17.986Z</updated>
+    <updated>2025-02-24T16:21:31.679Z</updated>
     <summary type="html"><![CDATA[<h2>域名管理</h2>
 <p>cloudflare</p>
 <p><a href="https://dash.cloudflare.com/" target="_blank" rel="noopener noreferrer">https://dash.cloudflare.com/</a></p>
@@ -6752,7 +6798,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">编程工具</title>
     <id>https://blog.lxip.top/tool/share/code-tool.html</id>
     <link href="https://blog.lxip.top/tool/share/code-tool.html"/>
-    <updated>2025-02-05T16:31:17.988Z</updated>
+    <updated>2025-02-24T16:21:31.681Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录编程相关工具，方便后续查找使用，工具适用于前后端开发、测试、运维等</p>
 </blockquote>
@@ -6966,7 +7012,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">导航学习</title>
     <id>https://blog.lxip.top/tool/share/navlearn.html</id>
     <link href="https://blog.lxip.top/tool/share/navlearn.html"/>
-    <updated>2025-02-05T16:31:18.009Z</updated>
+    <updated>2025-02-24T16:21:31.698Z</updated>
     <summary type="html"><![CDATA[<h2>介绍</h2>
 <blockquote>
 <p>整理编程相关的技术文档</p>
@@ -6985,7 +7031,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">多服务器监测面板</title>
     <id>https://blog.lxip.top/messing/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</id>
     <link href="https://blog.lxip.top/messing/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html"/>
-    <updated>2025-02-05T16:31:18.010Z</updated>
+    <updated>2025-02-24T16:21:31.699Z</updated>
     <summary type="html"><![CDATA[<p>✨&nbsp;Rust 版 ServerStatus 探针、威力加强版</p>
 <blockquote>
 <p>项目地址：<a href="https://github.com/zdz/ServerStatus-Rust" target="_blank" rel="noopener noreferrer">zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com)</a></p>
@@ -7264,7 +7310,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">frp实现远程桌面连接</title>
     <id>https://blog.lxip.top/messing/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</id>
     <link href="https://blog.lxip.top/messing/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html"/>
-    <updated>2025-02-05T16:31:18.033Z</updated>
+    <updated>2025-02-24T16:21:31.723Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
 <ol>
@@ -7456,7 +7502,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">GitHub单仓库管理多项目</title>
     <id>https://blog.lxip.top/java/git/gitHub-manage-project.html</id>
     <link href="https://blog.lxip.top/java/git/gitHub-manage-project.html"/>
-    <updated>2025-02-05T16:31:18.050Z</updated>
+    <updated>2025-02-24T16:21:31.734Z</updated>
     <summary type="html"><![CDATA[<h2>前置知识</h2>
 <p>需要对git命令比较熟悉，可以参考<a href="/java/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="_blank">常用的git命令</a></p>
 <h2>背景</h2>
@@ -7531,7 +7577,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">git实时拉取GitHub仓库代码</title>
     <id>https://blog.lxip.top/java/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/java/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2025-02-05T16:31:18.054Z</updated>
+    <updated>2025-02-24T16:21:31.750Z</updated>
     <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号<br>
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
@@ -7574,7 +7620,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">常用的git命令</title>
     <id>https://blog.lxip.top/java/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/java/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2025-02-05T16:31:18.055Z</updated>
+    <updated>2025-02-24T16:21:31.751Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录目前常用到的基本命令</p>
 </blockquote>
@@ -7643,7 +7689,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/messing/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/messing/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2025-02-05T16:31:18.060Z</updated>
+    <updated>2025-02-24T16:21:31.754Z</updated>
     <summary type="html"><![CDATA[<h2>背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2>PicGo配置多图床</h2>
@@ -7709,7 +7755,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/messing/workflow/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/messing/workflow/gitee-pages-action.html"/>
-    <updated>2025-02-05T16:31:18.064Z</updated>
+    <updated>2025-02-24T16:21:31.758Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -7760,7 +7806,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/messing/workflow/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/messing/workflow/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2025-02-05T16:31:18.071Z</updated>
+    <updated>2025-02-24T16:21:31.765Z</updated>
     <summary type="html"><![CDATA[<h2>大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2>前置知识</h2>
@@ -7835,10 +7881,84 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <published>2023-04-04T22:10:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">linux运行jar包</title>
+    <id>https://blog.lxip.top/om/linux/linux%E8%BF%90%E8%A1%8Cjar%E5%8C%85.html</id>
+    <link href="https://blog.lxip.top/om/linux/linux%E8%BF%90%E8%A1%8Cjar%E5%8C%85.html"/>
+    <updated>2025-02-24T16:21:31.769Z</updated>
+    <summary type="html"><![CDATA[<h2>一、环境安装</h2>
+<h3>1.JDK安装</h3>
+<p>这里安装JDK版本jdk-8u11-linux-x64.tar.gz</p>
+<p>注：在登录centos服务器之后切换到根（root）目录下</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cd /</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2>一、环境安装</h2>
+<h3>1.JDK安装</h3>
+<p>这里安装JDK版本jdk-8u11-linux-x64.tar.gz</p>
+<p>注：在登录centos服务器之后切换到根（root）目录下</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cd /</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>1.在root权限下，在根目录下创建文件夹</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span> mkdir -p /usr/local/java</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>切换到/usr/local/java目录下</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cd /usr/local/java</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>将该jdk-8u11-linux-x64.tar.gz压缩包上传到当前位置</p>
+<p>2.解压jdk-8u11-linux-x64.tar.gz压缩包</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>tar -zxvf ./jdk-8u11-linux-x64.tar.gz -C /usr/local/java/</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>然后切换到根目录下</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cd /</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>3.编辑Linux系统中环境变量所在文件</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>vi /etc/profile</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>4.在文件最后加入环境变量设置，加入后保存文件</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#set java environment</span></span>
+<span class="line"><span>export JAVA_HOME=/usr/local/java/jdk1.8.0_11 #这是自己的jdk所在位置</span></span>
+<span class="line"><span>export</span></span>
+<span class="line"><span>CLASSPATH=.:$JAVA_HOME/jre/lib/dt.jar:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/jre/lib/tools.jar</span></span>
+<span class="line"><span>export PATH=$PATH:$JAVA_HOME/bin</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>5.让环境变量生效</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>source /etc/profile</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>或</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>source ~/.bashrc</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>6.测试JDK是否已经配置好</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#执行命令</span></span>
+<span class="line"><span>java -version</span></span>
+<span class="line"><span>#显示如下</span></span>
+<span class="line"><span>java version "1.8.0_11"</span></span>
+<span class="line"><span>Java(TM) SE Runtime Environment (build 1.8.0_11-b12)</span></span>
+<span class="line"><span>Java HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#执行命令</span></span>
+<span class="line"><span>javac-version</span></span>
+<span class="line"><span>#显示如下</span></span>
+<span class="line"><span>javac 1.8.0_11</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>二、运行jar包</h2>
+<p>后台运行jar</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>nohup java -jar chatai-data-app.jar &gt;chatai-data-app-log.txt &amp;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>查看项目进程号</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>ps aux | grep chatai-data-app.jar</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>使用命令杀死进程：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kill -9 进程号</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>附件</h2>
+<p>云服务器启动项目：</p>
+<p><a href="https://blog.csdn.net/wsf408908184/article/details/80760791" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/wsf408908184/article/details/80760791</a></p>
+<p>关闭项目：</p>
+<p><a href="https://www.kezez.com/archives/62.html/comment-page-1" target="_blank" rel="noopener noreferrer">https://www.kezez.com/archives/62.html/comment-page-1</a></p>
+]]></content>
+    <author>
+      <name>nxg</name>
+    </author>
+    <category term="linux"/>
+    <contributor>
+      <name>nxg</name>
+    </contributor>
+    <published>2022-11-18T00:00:00.000Z</published>
+    <rights>Copyright by nxg</rights>
+  </entry>
+  <entry>
     <title type="text">文档</title>
     <id>https://blog.lxip.top/java/cookbook/other.html</id>
     <link href="https://blog.lxip.top/java/cookbook/other.html"/>
-    <updated>2025-02-05T16:31:18.083Z</updated>
+    <updated>2025-02-24T16:21:31.786Z</updated>
     <summary type="html"><![CDATA[<h2>CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -7903,7 +8023,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/java/database/question.html</id>
     <link href="https://blog.lxip.top/java/database/question.html"/>
-    <updated>2025-02-05T16:31:18.086Z</updated>
+    <updated>2025-02-24T16:21:31.790Z</updated>
     <summary type="html"><![CDATA[<h2>问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -7950,7 +8070,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/om/linux/linux.html</id>
     <link href="https://blog.lxip.top/om/linux/linux.html"/>
-    <updated>2025-02-05T16:31:18.090Z</updated>
+    <updated>2025-02-24T16:21:31.793Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -8289,7 +8409,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/java/git/gitMore.html</id>
     <link href="https://blog.lxip.top/java/git/gitMore.html"/>
-    <updated>2025-02-05T16:31:18.134Z</updated>
+    <updated>2025-02-24T16:21:31.835Z</updated>
     <summary type="html"><![CDATA[<h2>一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2>二、准备</h2>
@@ -8449,7 +8569,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/java/git/git.html</id>
     <link href="https://blog.lxip.top/java/git/git.html"/>
-    <updated>2025-02-05T16:31:18.156Z</updated>
+    <updated>2025-02-24T16:21:31.860Z</updated>
     <summary type="html"><![CDATA[
 <p>A: 查看本地分支<br>
 使用 git branch命令，如下：git branch<br>
@@ -8519,7 +8639,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2025-02-05T16:31:18.162Z</updated>
+    <updated>2025-02-24T16:21:31.868Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -8527,7 +8647,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">termius使用</title>
     <id>https://blog.lxip.top/messing/window/termius%E4%BD%BF%E7%94%A8.html</id>
     <link href="https://blog.lxip.top/messing/window/termius%E4%BD%BF%E7%94%A8.html"/>
-    <updated>2025-02-05T16:31:18.162Z</updated>
+    <updated>2025-02-24T16:21:31.868Z</updated>
     <summary type="html"><![CDATA[<p>粘贴：ctrl+shit+v</p>
 <p>同理</p>
 <h1>termius使用ssh教程</h1>
@@ -8569,7 +8689,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">win terminal 个性化</title>
     <id>https://blog.lxip.top/messing/window/win%20terminal%20%E4%B8%AA%E6%80%A7%E5%8C%96.html</id>
     <link href="https://blog.lxip.top/messing/window/win%20terminal%20%E4%B8%AA%E6%80%A7%E5%8C%96.html"/>
-    <updated>2025-02-05T16:31:18.164Z</updated>
+    <updated>2025-02-24T16:21:31.870Z</updated>
     <summary type="html"><![CDATA[<p>安装windows terminal</p>
 <blockquote>
 <p>安装方法有很多，比如可以直接从 Microsoft Store 下载安装。</p>
@@ -8645,7 +8765,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">window terminal 使用</title>
     <id>https://blog.lxip.top/messing/window/window%20terminal%20%E4%BD%BF%E7%94%A8.html</id>
     <link href="https://blog.lxip.top/messing/window/window%20terminal%20%E4%BD%BF%E7%94%A8.html"/>
-    <updated>2025-02-05T16:31:18.167Z</updated>
+    <updated>2025-02-24T16:21:31.874Z</updated>
     <summary type="html"><![CDATA[<h2>安装</h2>
 <p>下载安装window terminal</p>
 <h3>ohmyposh下载安装</h3>
@@ -8758,7 +8878,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">k30刷机</title>
     <id>https://blog.lxip.top/messing/flashing/k30%E5%88%B7%E6%9C%BA.html</id>
     <link href="https://blog.lxip.top/messing/flashing/k30%E5%88%B7%E6%9C%BA.html"/>
-    <updated>2025-02-05T16:31:18.181Z</updated>
+    <updated>2025-02-24T16:21:31.892Z</updated>
     <summary type="html"><![CDATA[<figure><figcaption></figcaption></figure>
 <figure><figcaption></figcaption></figure>
 <p>https:删除//www.123pan.com/s/oncRVv-7pU0A.html</p>
@@ -8786,7 +8906,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">U盘PE制作教程</title>
     <id>https://blog.lxip.top/messing/window/U%E7%9B%98PE%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B.html</id>
     <link href="https://blog.lxip.top/messing/window/U%E7%9B%98PE%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B.html"/>
-    <updated>2025-02-05T16:31:18.183Z</updated>
+    <updated>2025-02-24T16:21:31.893Z</updated>
     <summary type="html"><![CDATA[<h2>1、准备工作:</h2>
 <p>制作PE材料的选择:</p>
 <p>U盘推荐: 闪迪（SanDisk）CZ48</p>
@@ -8822,7 +8942,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2025-02-05T16:31:18.186Z</updated>
+    <updated>2025-02-24T16:21:31.896Z</updated>
     <summary type="html"><![CDATA[
 <p>一个基于 VuePress  theme hope 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2>服务提供</h2>
@@ -8917,7 +9037,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/java/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/java/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2025-02-05T16:31:18.188Z</updated>
+    <updated>2025-02-24T16:21:31.898Z</updated>
     <summary type="html"><![CDATA[<h2>Optional类</h2>
 <h3>引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -9419,7 +9539,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/java/pracprojects/</id>
     <link href="https://blog.lxip.top/java/pracprojects/"/>
-    <updated>2025-02-05T16:31:18.511Z</updated>
+    <updated>2025-02-24T16:21:32.250Z</updated>
     <summary type="html"><![CDATA[<p><a href="/java/pracprojects/lamp-project/" target="_blank">lamp-project</a></p>
 <blockquote>
 <p>lamp-cloud环境安装及配置、启动、使用等</p>
@@ -9438,7 +9558,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">捣鼓教程</title>
     <id>https://blog.lxip.top/messing/techguide/</id>
     <link href="https://blog.lxip.top/messing/techguide/"/>
-    <updated>2025-02-05T16:31:18.512Z</updated>
+    <updated>2025-02-24T16:21:32.251Z</updated>
     <summary type="html"><![CDATA[<p><a href="/messing/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html" target="_blank">picgo使用多图床.md</a></p>
 <p><a href="/messing/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html" target="_blank">Cloudfare和Telegraph-Image-实现图床搭建.md</a></p>]]></summary>
     <content type="html"><![CDATA[<p><a href="/messing/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html" target="_blank">picgo使用多图床.md</a></p>
@@ -9450,7 +9570,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/java/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/java/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2025-02-05T16:31:18.513Z</updated>
+    <updated>2025-02-24T16:21:32.252Z</updated>
     <summary type="html"><![CDATA[<h2>1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2>1.HTTP协议简介</h2>
