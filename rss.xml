@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 24 Feb 2025 16:21:30 GMT</pubDate>
-    <lastBuildDate>Mon, 24 Feb 2025 16:21:30 GMT</lastBuildDate>
+    <pubDate>Sat, 22 Mar 2025 03:23:32 GMT</pubDate>
+    <lastBuildDate>Sat, 22 Mar 2025 03:23:32 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -17,6 +17,7 @@
     <category>hyprland</category>
     <category>Go</category>
     <category>frp</category>
+    <category>yudao-cloud</category>
     <category>lamp-cloud</category>
     <category>运维</category>
     <category>xxl-job</category>
@@ -34,14 +35,15 @@
     <category>Mybatis</category>
     <category>tool</category>
     <category>导航</category>
+    <category>工具推荐</category>
     <category>快速导航</category>
     <category>编程知识库</category>
     <category>服务器监测</category>
-    <category>linux</category>
     <category>技术文档</category>
+    <category>linux</category>
     <category>mysql</category>
-    <category>生活</category>
     <category>window</category>
+    <category>生活</category>
     <category>Android</category>
     <category>Java</category>
     <category>实战项目</category>
@@ -1422,6 +1424,128 @@ POSTGRES_PASSWORD: 密码</p>
 <p>点对点访问服务:</p>
 <p>使用window自带的远程连接工具：127.0.0.1:7004 输入电脑用户名和密码，即可访问目标机器</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>redis、naocs一键启动脚本</title>
+      <link>https://blog.lxip.top/java/pracprojects/yudao-cloud/%E6%9C%8D%E5%8A%A1%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/yudao-cloud/%E6%9C%8D%E5%8A%A1%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">redis、naocs一键启动脚本</source>
+      <description>redis、naocs一键启动脚本 nacos-redis.bat jar一键启动脚本 cloud-start.bat</description>
+      <category>yudao-cloud</category>
+      <pubDate>Fri, 02 Aug 2024 10:30:17 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>redis、naocs一键启动脚本</h2>
+<p>nacos-redis.bat</p>
+<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">@echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> off</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Starting</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Redis...</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ""</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /D</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "E:\Redis-x64-5.0.14.1"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> .</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">\r</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">edis-server.exe</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> redis.windows.conf</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Starting</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Nacos...</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ""</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /D</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "E:\nacos\bin"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> .</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">\s</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">tartup.cmd</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -m</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> standalone</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Both</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Redis</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> and</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Nacos</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> are</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> started</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> in</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> separate</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> windows.</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">pause</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>jar一键启动脚本</h2>
+<p>cloud-start.bat</p>
+<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">@echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> off</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> .....</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 1、start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> gateway.jar</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "JAR 1 Window"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  cmd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xms128m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xmx128m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -Dfile.encoding=UTF-8</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\Administrator\Desktop\cloud-jar\yudao-gateway.jar"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 等待30秒</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">timeout</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /t</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 30</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /nobreak</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">nul</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  2、start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yudao-module-infra-biz.jar</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "JAR 2 Window"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  cmd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xms128m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xmx128m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -Dfile.encoding=UTF-8</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\Administrator\Desktop\cloud-jar\yudao-module-infra-biz.jar"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 等待30秒</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">timeout</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /t</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 30</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /nobreak</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">nul</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  3、</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yudao-module-system-biz.jar</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "JAR 3 Window"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xms512m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xmx512m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -Dfile.encoding=UTF-8</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\Administrator\Desktop\cloud-jar\yudao-module-system-biz.jar"</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 等待30秒</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">timeout</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /t</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 30</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /nobreak</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">nul</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  4、start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yudao-module-medicine-biz.jar</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "JAR 4 Window"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xms512m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xmx512m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Dfile.encoding=UTF-8</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\Administrator\Desktop\cloud-jar\yudao-module-medicine-biz.jar"</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  all</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> complete！</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">pause</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>0-环境安装-整体</title>
+      <link>https://blog.lxip.top/java/pracprojects/yudao-cloud/0-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E6%95%B4%E4%BD%93.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/yudao-cloud/0-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E6%95%B4%E4%BD%93.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">0-环境安装-整体</source>
+      <description>一、准备工作 环境和工具 jdk1.8、idea2022、maven3.9.3 redis nacos-server-2.3.2 环境安装配置 服务启动 redis nacos 单机启动，不用修改配置，直接启动 二、项目启动 后台启动 启动顺序：GatewayServerApplication、InfraServerApplication、System...</description>
+      <category>yudao-cloud</category>
+      <pubDate>Thu, 01 Aug 2024 10:30:17 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>一、准备工作</h2>
+<h3>环境和工具</h3>
+<p>jdk1.8、idea2022、maven3.9.3</p>
+<p>redis<br>
+nacos-server-2.3.2</p>
+<p>环境安装配置</p>
+<h3>服务启动</h3>
+<p>redis</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.\redis-server.exe redis.windows.conf</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>nacos</p>
+<blockquote>
+<p>单机启动，不用修改配置，直接启动</p>
+</blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.\startup.cmd -m standalone</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>二、项目启动</h2>
+<h3>后台启动</h3>
+<p>启动顺序：GatewayServerApplication、InfraServerApplication、SystemServerApplication、yudao-module-medicine</p>
+<p>地址：<br>
+<a href="http://127.0.0.1:48099/doc.html" target="_blank" rel="noopener noreferrer">http://127.0.0.1:48099/doc.html</a></p>
+<h3>前台启动</h3>
+<blockquote>
+<p>node版本：v20.15</p>
+</blockquote>
+<p>安装依赖：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>npm  i</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>启动项目：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>npm run dev</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>想局域网内访问，需要修改  .env.local  对应的localhost地址为 自己的本地ip地址</p>
+</blockquote>
+<h2>附件</h2>
+<h3>redis连接问题</h3>
+<p>redis默认没有开启远程连接，直接访问本机ip是不能连接上的,</p>
+<blockquote>
+<p>redis默认配置，启动redis，在application.yml配置使用localhost是可以连接成功，但直接使用ip地址连接就是连接失败，需要修改配置。</p>
+</blockquote>
+<blockquote>
+<p>redis开启远程服务的操作方法：</p>
+<p>1.打开redis的配置文件“redis.conf”。</p>
+<p>2.将“bind 127.0.0.1”注释掉。</p>
+<p>3.将“protected-mode yes”改成“protected-mode no”。</p>
+<p>4.添加以下一行代码。<br>
+protected-mode no<br>
+重启redis</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>rocketmq-安装及配置</title>
+      <link>https://blog.lxip.top/java/pracprojects/yudao-cloud/rocketmq-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/yudao-cloud/rocketmq-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">rocketmq-安装及配置</source>
+      <description>rocketmq 一、准备工作 下载地址：https://rocketmq.apache.org/zh/download 官方文档：https://rocketmq.apache.org/zh/docs/quickStart/01quickstart/ 二、启动 启动命令： 启动BROKER</description>
+      <category>yudao-cloud</category>
+      <pubDate>Thu, 01 Aug 2024 10:30:17 GMT</pubDate>
+      <content:encoded><![CDATA[<p>rocketmq</p>
+<h2>一、准备工作</h2>
+<p>下载地址：<a href="https://rocketmq.apache.org/zh/download" target="_blank" rel="noopener noreferrer">https://rocketmq.apache.org/zh/download</a></p>
+<p>官方文档：<a href="https://rocketmq.apache.org/zh/docs/quickStart/01quickstart/" target="_blank" rel="noopener noreferrer">https://rocketmq.apache.org/zh/docs/quickStart/01quickstart/</a></p>
+<p>二、启动</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 目录位置：D:\software\rocketmq\rocketmq-all-4.9.8-bin-release\bin</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>启动命令：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>start mqnamesrv.cmd</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p><strong>启动BROKER</strong></p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>5-Node安装及配置</title>
@@ -6159,6 +6283,12 @@ idea就会提示找到svn对应的.exe</p>
 <blockquote>
 <p>录屏、直播工具</p>
 </blockquote>
+<p>gif</p>
+<p><a href="https://github.com/aardio/gif123" target="_blank" rel="noopener noreferrer">https://github.com/aardio/gif123</a></p>
+<blockquote>
+<p>开始录制：Ctrl + Alt + Shift + Z</p>
+<p>结束录制：Ctrl + Alt + Shift + Z</p>
+</blockquote>
 <p><a href="https://vb-audio.com/Voicemeeter/banana.htm" target="_blank" rel="noopener noreferrer">voicemeeter</a></p>
 <blockquote>
 <p>音频分流</p>
@@ -6276,6 +6406,31 @@ idea就会提示找到svn对应的.exe</p>
 <p><a href="https://yan-jian.com/%E5%88%A9%E7%94%A8u%E7%9B%98%E5%AE%89%E8%A3%85%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.html" target="_blank" rel="noopener noreferrer">利用u盘安装操作系统</a></p>
 ]]></content:encoded>
       <enclosure url="https://crystalmark.info/en/wp-content/uploads/sites/3/CrystalMarkRetro1_0_0Aoi-en-TR-1536x845.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>AI工具</title>
+      <link>https://blog.lxip.top/tool/share/ai-tool.html</link>
+      <guid>https://blog.lxip.top/tool/share/ai-tool.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">AI工具</source>
+      <description>整理个人常用AI AI cursor、chatgpt、poe https://grok.com/chat gemini https://gemini.google.com/ poe https://poe.com/ AI画图 AI画图： https://www.liblib.art/ AI分析pdf https://kimi.moonshot.cn/</description>
+      <category>工具推荐</category>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>整理个人常用AI</p>
+</blockquote>
+<h2>AI</h2>
+<p>cursor、chatgpt、poe</p>
+<p><a href="https://grok.com/chat" target="_blank" rel="noopener noreferrer">https://grok.com/chat</a></p>
+<p>gemini</p>
+<p><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">https://gemini.google.com/</a></p>
+<p>poe</p>
+<p><a href="https://poe.com/" target="_blank" rel="noopener noreferrer">https://poe.com/</a></p>
+<h2>AI画图</h2>
+<p>AI画图：</p>
+<p><a href="https://www.liblib.art/" target="_blank" rel="noopener noreferrer">https://www.liblib.art/</a></p>
+<p>AI分析pdf</p>
+<p><a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer">https://kimi.moonshot.cn/</a></p>
+]]></content:encoded>
     </item>
     <item>
       <title>网站分析</title>
@@ -7294,6 +7449,21 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 ]]></content:encoded>
     </item>
     <item>
+      <title>技术类文档</title>
+      <link>https://blog.lxip.top/java/cookbook/%E6%8A%80%E6%9C%AF%E7%B1%BB%E6%96%87%E6%A1%A3.html</link>
+      <guid>https://blog.lxip.top/java/cookbook/%E6%8A%80%E6%9C%AF%E7%B1%BB%E6%96%87%E6%A1%A3.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">技术类文档</source>
+      <description>算法类 https://www.acwing.com/about/ Java Go 面经</description>
+      <category>技术文档</category>
+      <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>算法类</h2>
+<p><a href="https://www.acwing.com/about/" target="_blank" rel="noopener noreferrer">https://www.acwing.com/about/</a></p>
+<h2>Java</h2>
+<h2>Go</h2>
+<h2>面经</h2>
+]]></content:encoded>
+    </item>
+    <item>
       <title>linux运行jar包</title>
       <link>https://blog.lxip.top/om/linux/linux%E8%BF%90%E8%A1%8Cjar%E5%8C%85.html</link>
       <guid>https://blog.lxip.top/om/linux/linux%E8%BF%90%E8%A1%8Cjar%E5%8C%85.html</guid>
@@ -7974,6 +8144,26 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>4.push到git仓库</p>
 <p>命令如下：git push origin [分支名称]</p>
 <p>例如：git push origin plateform2</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>window常见问题</title>
+      <link>https://blog.lxip.top/messing/window/window%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/messing/window/window%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">window常见问题</source>
+      <description>空文件夹删不掉打不开 新建文件 clear-blank.bat 将需要删除的问题拖进 clear-blank.bat 即可删除 注意：删除之后无法恢复了，谨慎使用。</description>
+      <category>window</category>
+      <pubDate>Mon, 25 Apr 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>空文件夹删不掉打不开</h2>
+<blockquote>
+<p>新建文件  clear-blank.bat</p>
+</blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>DEL /F /A /Q  \\?\%1</span></span>
+<span class="line"><span>RD /S /Q \\?\%1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>将需要删除的问题拖进 clear-blank.bat 即可删除</p>
+<blockquote>
+<p>注意：删除之后无法恢复了，谨慎使用。</p>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>
@@ -8792,18 +8982,24 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 ]]></content:encoded>
     </item>
     <item>
-      <title>实战项目【开源项目】</title>
+      <title>实战项目</title>
       <link>https://blog.lxip.top/java/pracprojects/</link>
       <guid>https://blog.lxip.top/java/pracprojects/</guid>
-      <source url="https://blog.lxip.top/rss.xml">实战项目【开源项目】</source>
-      <description>lamp-cloud环境安装及配置、启动、使用等</description>
+      <source url="https://blog.lxip.top/rss.xml">实战项目</source>
+      <description>开源项目 lamp-cloud环境安装及配置、启动、使用等 yudao-cloud mini 项目总结</description>
       <category>实战项目</category>
-      <content:encoded><![CDATA[<p><a href="/java/pracprojects/lamp-project/" target="_blank">lamp-project</a></p>
+      <content:encoded><![CDATA[<h2>开源项目</h2>
+<p><a href="/java/pracprojects/lamp-project/" target="_blank">lamp-project</a></p>
 <blockquote>
 <p>lamp-cloud环境安装及配置、启动、使用等</p>
 </blockquote>
-<!-- [yudao-cloud](./yudao-cloud/README.md)
-> yudao-cloud mini  -->]]></content:encoded>
+<p><a href="/java/pracprojects/yudao-cloud/" target="_blank">yudao-cloud</a></p>
+<blockquote>
+<p>yudao-cloud mini</p>
+</blockquote>
+<h2>项目总结</h2>
+<p><a href="/java/pracprojects/Lottery%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93.html" target="_blank">Lottery项目总结</a></p>
+]]></content:encoded>
     </item>
     <item>
       <title>捣鼓教程</title>
