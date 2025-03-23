@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 22 Mar 2025 03:23:32 GMT</pubDate>
-    <lastBuildDate>Sat, 22 Mar 2025 03:23:32 GMT</lastBuildDate>
+    <pubDate>Sun, 23 Mar 2025 09:45:20 GMT</pubDate>
+    <lastBuildDate>Sun, 23 Mar 2025 09:45:20 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -24,6 +24,7 @@
     <category>项目整合</category>
     <category>Knife4j</category>
     <category>项目</category>
+    <category>window</category>
     <category>Springboot</category>
     <category>maven</category>
     <category>git</category>
@@ -42,7 +43,6 @@
     <category>技术文档</category>
     <category>linux</category>
     <category>mysql</category>
-    <category>window</category>
     <category>生活</category>
     <category>Android</category>
     <category>Java</category>
@@ -3948,6 +3948,141 @@ SampleXxlJob类：</p>
 </ol>
 <p><code>-XX:+UseParallelGC</code></p>
 <p>让GC可以更快的执行。（只是JDK 5里对GC新增加的参数）</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>window安装WSL2</title>
+      <link>https://blog.lxip.top/messing/window/window%E5%AE%89%E8%A3%85WSL2.html</link>
+      <guid>https://blog.lxip.top/messing/window/window%E5%AE%89%E8%A3%85WSL2.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">window安装WSL2</source>
+      <description>Windows10安装WSL2 前置：会基本linux命令、vim 安装 注意：Windows版本需要高于1903，，不然得手动升级 Windows 10 开启Windows 子系统 适用于Linux的Windows子系统/Windows Subsystem for Linux 和 虚拟机平台/Virtual Machine Platform 使用wi...</description>
+      <category>window</category>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>Windows10安装WSL2</p>
+<p>前置：会基本linux命令、vim</p>
+</blockquote>
+<h2>安装</h2>
+<blockquote>
+<p>注意：Windows版本需要高于1903，，不然得手动升级 Windows 10</p>
+</blockquote>
+<p>开启Windows 子系统</p>
+<blockquote>
+<p><strong>适用于Linux的Windows子系统/Windows Subsystem for Linux</strong> 和 <strong>虚拟机平台/Virtual Machine Platform</strong></p>
+<p>使用win+r，输入appwiz.cpl</p>
+</blockquote>
+<p>1、更新wsl子系统</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wsl --update</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>2、 wsl 版本设置为 wsl2</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wsl --set-default-version 2</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>3、安装Ubuntu-20.04</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wsl --install</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>默认安装的是Ubuntu-20.04</p>
+</blockquote>
+<p>4、启动Ubuntu</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wsl.exe -d Ubuntu</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>设置用户名和密码，exit退出</p>
+</blockquote>
+<p>5、导出：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wsl --export Ubuntu ./Ubuntu-20.04.tar</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>./ 表示当前目录下</p>
+</blockquote>
+<p>成功提示：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>正在导出，这可能需要几分钟时间。 (1123 MB)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>操作成功完成。</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>6、注销原来的系统</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wsl --unregister Ubuntu</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>成功提示：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>正在注销。</span></span>
+<span class="line"><span>操作成功完成。</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>7、WSL从C盘迁移到其它盘</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wsl --import Ubuntu-20.04 D:\software\wsl\Ubuntu-20.04 D:\software\wsl\Ubuntu-20.04.tar --version 2</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>成功提示：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>操作成功完成。</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>8、启动：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wsl.exe -d Ubuntu-20.04</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>由于将 Ubuntu 重命名为Ubuntu-20.04</p>
+</blockquote>
+<p>9、进入系统之后看是否导入成功：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>df -h</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>成功提示：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Filesystem      Size  Used Avail Use% Mounted on</span></span>
+<span class="line"><span>none            7.8G     0  7.8G   0% /usr/lib/modules/5.15.167.4-microsoft-standard-WSL2</span></span>
+<span class="line"><span>none            7.8G  4.0K  7.8G   1% /mnt/wsl</span></span>
+<span class="line"><span>drivers         301G  141G  160G  47% /usr/lib/wsl/drivers</span></span>
+<span class="line"><span>/dev/sdc       1007G  1.2G  955G   1% /</span></span>
+<span class="line"><span>none            7.8G   76K  7.8G   1% /mnt/wslg</span></span>
+<span class="line"><span>none            7.8G     0  7.8G   0% /usr/lib/wsl/lib</span></span>
+<span class="line"><span>rootfs          7.8G  2.4M  7.8G   1% /init</span></span>
+<span class="line"><span>none            7.8G  512K  7.8G   1% /run</span></span>
+<span class="line"><span>none            7.8G     0  7.8G   0% /run/lock</span></span>
+<span class="line"><span>none            7.8G     0  7.8G   0% /run/shm</span></span>
+<span class="line"><span>tmpfs           4.0M     0  4.0M   0% /sys/fs/cgroup</span></span>
+<span class="line"><span>none            7.8G   64K  7.8G   1% /mnt/wslg/versions.txt</span></span>
+<span class="line"><span>none            7.8G   64K  7.8G   1% /mnt/wslg/doc</span></span>
+<span class="line"><span>C:\             301G  141G  160G  47% /mnt/c</span></span>
+<span class="line"><span>D:\             177G  107G   71G  61% /mnt/d</span></span>
+<span class="line"><span>tmpfs           1.6G   16K  1.6G   1% /run/user/1000</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>环境配置</h2>
+<h3>配置国内源</h3>
+<p>备份源：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cp /etc/apt/sources.list /etc/apt/sources.list.bak</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>普通用户没有权限，提升权限，sudo</p>
+</blockquote>
+<p>编辑sources.list源文件</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>sudo vim /etc/apt/sources.list</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>添加一下源：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse</span></span>
+<span class="line"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse</span></span>
+<span class="line"><span>deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse</span></span>
+<span class="line"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse</span></span>
+<span class="line"><span>deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse</span></span>
+<span class="line"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse</span></span>
+<span class="line"><span>deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse</span></span>
+<span class="line"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse</span></span>
+<span class="line"><span>deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</span></span>
+<span class="line"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>保存，默认已经会使用vim命令</p>
+</blockquote>
+<p>更新源</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>sudo apt-get update</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>安装ssh</h3>
+<p>安装ssh</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>apt install openssh-server</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>启动ssh服务</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>service ssh restart</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>安装wsl插件</h2>
+<blockquote>
+<p>在vscode中安装wsl插件</p>
+<p>Open any folder in the Windows Subsystem for Linux (WSL) and take advantage</p>
+</blockquote>
+<p>最后就可以开始你的表演了。</p>
+<h2>附件</h2>
+<p>使用命令方式开启Windows子系统</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 开启 Linux 子系统</span></span>
+<span class="line"><span>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</span></span>
+<span class="line"><span># 开启虚拟机平台</span></span>
+<span class="line"><span>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>常用命令</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 查看wsl版本</span></span>
+<span class="line"><span>wsl -l -v</span></span>
+<span class="line"><span># 查看正在wsl中运行的linux发行版</span></span>
+<span class="line"><span>wsl --list --running</span></span>
+<span class="line"><span># 关闭所有正在wsl中运行的linux发行版</span></span>
+<span class="line"><span>wsl --shutdown</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>一键脚本换清华源</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wget https://gitee.com/lin-xi-269/tools/raw/master/os/QHubuntu20.04 &amp;&amp; bash QHubuntu20.04</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>参考：</p>
+<p><a href="https://blog.csdn.net/q283614346/article/details/138790776" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/q283614346/article/details/138790776</a></p>
+<p><a href="https://blog.csdn.net/xiaouncle/article/details/136910057" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/xiaouncle/article/details/136910057</a></p>
+<p><a href="https://blog.csdn.net/m0_51233386/article/details/127961763" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/m0_51233386/article/details/127961763</a></p>
 ]]></content:encoded>
     </item>
     <item>
