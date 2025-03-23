@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 23 Mar 2025 09:45:20 GMT</pubDate>
-    <lastBuildDate>Sun, 23 Mar 2025 09:45:20 GMT</lastBuildDate>
+    <pubDate>Sun, 23 Mar 2025 14:41:11 GMT</pubDate>
+    <lastBuildDate>Sun, 23 Mar 2025 14:41:11 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -31,6 +31,7 @@
     <category>lombok</category>
     <category>技巧</category>
     <category>数据库</category>
+    <category>实战项目</category>
     <category>工具</category>
     <category>图床</category>
     <category>Mybatis</category>
@@ -46,11 +47,102 @@
     <category>生活</category>
     <category>Android</category>
     <category>Java</category>
-    <category>实战项目</category>
     <category>捣鼓</category>
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>Rocky Linux 安装docker</title>
+      <link>https://blog.lxip.top/om/docker/Rocky%20Linux%20%E5%AE%89%E8%A3%85docker.html</link>
+      <guid>https://blog.lxip.top/om/docker/Rocky%20Linux%20%E5%AE%89%E8%A3%85docker.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Rocky Linux 安装docker</source>
+      <description>背景：京东云云服务器安装rockyLinux安装docker 安装Docker-CE 目前安装的是Docker version 27.3.1, build ce12230 修改repo源 修改为国内阿里源以提高安装速度 设置存储库 安装 安装docker-ce时会同步安装containerd.io、docker-ce-cli、docker-buildx...</description>
+      <category>docker</category>
+      <category>安装教程</category>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>背景：京东云云服务器安装rockyLinux安装docker</p>
+</blockquote>
+<h1>安装Docker-CE</h1>
+<p>目前安装的是Docker version 27.3.1, build ce12230</p>
+<h2>修改repo源</h2>
+<p>修改为国内阿里源以提高安装速度</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>sed -e 's|^mirrorlist=|#mirrorlist=|g' \</span></span>
+<span class="line"><span>    -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g' \</span></span>
+<span class="line"><span>    -i.bak \</span></span>
+<span class="line"><span>    /etc/yum.repos.d/rocky*.repo</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>设置存储库</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>安装</h2>
+<p><a href="http://xn--docker-cecontainerd-ts24av70exu1bla7615dwn2a6u3noa.io" target="_blank" rel="noopener noreferrer">安装docker-ce时会同步安装containerd.io</a>、docker-ce-cli、docker-buildx-plugin、docker-ce-rootless-extras和docker-compose-plugin。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>dnf install -y docker-ce</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>此命令还会创建一个 docker组，但默认情况下不会向该组添加任何用户。</p>
+<h2>允许非root用户运行 (可选)</h2>
+<p>Docker 守护程序绑定到 Unix 套接字，而不是 TCP 端口。<br>
+默认情况下，用户 root拥有 Unix 套接字，Docker守护程序始终以root用户身份运行，其他用户只能使用sudo访问。<br>
+如果不想docker在命令前加上sudo，可以创建一个名为docker的Unix组并向其中添加普通用户。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>usermod -aG docker anliven</span></span>
+<span class="line"><span>newgrp docker</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>设置自启动并启动</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>systemctl --now enable docker</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>Docker 加速器</h2>
+<p>vi /etc/docker/daemon.json</p>
+<p>输入以下配置：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>{</span></span>
+<span class="line"><span>"log-driver": "json-file",</span></span>
+<span class="line"><span>"log-opts": {</span></span>
+<span class="line"><span>	"max-file": "3",</span></span>
+<span class="line"><span>	"max-size": "500m"</span></span>
+<span class="line"><span>},</span></span>
+<span class="line"><span>"data-root":"/data/docker",</span></span>
+<span class="line"><span>"builder": {</span></span>
+<span class="line"><span>    "gc": {</span></span>
+<span class="line"><span>     "defaultKeepStorage": "20GB",</span></span>
+<span class="line"><span>     "enabled": true</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span> },</span></span>
+<span class="line"><span>"experimental": false,</span></span>
+<span class="line"><span>"features": {</span></span>
+<span class="line"><span>    "buildkit":  true</span></span>
+<span class="line"><span>},</span></span>
+<span class="line"><span>"registry-mirrors": [</span></span>
+<span class="line"><span>  "https://docker.m.daocloud.io",</span></span>
+<span class="line"><span>  "https://docker.1panel.live",</span></span>
+<span class="line"><span>  "https://hub-mirror.c.163.com",</span></span>
+<span class="line"><span>  "https://mirror.baidubce.com",</span></span>
+<span class="line"><span>  "https://dc.j8.work",</span></span>
+<span class="line"><span>  "https://docker.1ms.run",</span></span>
+<span class="line"><span>  "https://dockerproxy.com",</span></span>
+<span class="line"><span>  "https://docker.mirrors.ustc.edu.cn",</span></span>
+<span class="line"><span>  "https://docker.nju.edu.cn"</span></span>
+<span class="line"><span>]</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>中国科学技术大学的 Docker 加速器</p>
+<p>"<a href="https://docker.mirrors.ustc.edu.cn%22,%22https://mirror.iscas.ac.cn%22" target="_blank" rel="noopener noreferrer">https://docker.mirrors.ustc.edu.cn","https://mirror.iscas.ac.cn"</a></p>
+<h2>使配置生效</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span> systemctl daemon-reload</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>重启docker</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>systemctl restart docker</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>验证安装</h2>
+<p>下载运行hello-world映像，容器运行时会打印一条确认消息并退出。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker run hello-world</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 设置开机自启动，同时启动 docker 服务</span></span>
+<span class="line"><span>systemctl enable docker --now</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span># 查看 docker 服务状态</span></span>
+<span class="line"><span>systemctl status docker</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 查看 Docker 版本信息(docker --version 命令只显示版本信息)</span></span>
+<span class="line"><span>docker version</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>附件</h2>
+<p>参考：</p>
+<p><a href="https://www.cnblogs.com/anliven/p/18399355" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/anliven/p/18399355</a></p>
+<p><a href="https://www.rockylinux.cn/notes/zai-rocky-linux-9-1-shang-an-zhuang-docker-ce.html" target="_blank" rel="noopener noreferrer">https://www.rockylinux.cn/notes/zai-rocky-linux-9-1-shang-an-zhuang-docker-ce.html</a></p>
+<p>相关参数配置（daemon.json）解释</p>
+<p>Docker CE 软件仓库</p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/" target="_blank" rel="noopener noreferrer">https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/</a></p>
+]]></content:encoded>
+    </item>
     <item>
       <title>docker安装umami</title>
       <link>https://blog.lxip.top/om/docker/umami-install.html</link>
@@ -231,6 +323,104 @@ POSTGRES_PASSWORD: 密码</p>
 <p><a href="https://blog.amarea.cn/archives/use-docker-deploy-umami-analytics.html" target="_blank" rel="noopener noreferrer">https://blog.amarea.cn/archives/use-docker-deploy-umami-analytics.html</a></p>
 <p><a href="https://www.zywvvd.com/notes/tools/umami/umami/" target="_blank" rel="noopener noreferrer">https://www.zywvvd.com/notes/tools/umami/umami/</a></p>
 <p><a href="https://blog.laoda.de/archives/umami?cid=3913" target="_blank" rel="noopener noreferrer">https://blog.laoda.de/archives/umami?cid=3913</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>docker各容器安装</title>
+      <link>https://blog.lxip.top/om/docker/docker%E5%90%84%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85.html</link>
+      <guid>https://blog.lxip.top/om/docker/docker%E5%90%84%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">docker各容器安装</source>
+      <description>目前安装的是Docker version 27.3.1, build ce12230 使用绝对路径的目的是，在任意目录下执行命令都可以启动和映射对应的数据到本地 mysql 启动： https://www.cnblogs.com/sheseido/p/12708864.html 适用于编排 https://www.cnblogs.com/liugp/p...</description>
+      <category>docker</category>
+      <category>安装教程</category>
+      <pubDate>Wed, 13 Nov 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>目前安装的是Docker version 27.3.1, build ce12230</p>
+<p>使用绝对路径的目的是，在任意目录下执行命令都可以启动和映射对应的数据到本地</p>
+</blockquote>
+<h2>mysql</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker pull mysql:8.0.20</span></span>
+<span class="line"><span>mkdir -p /root/docker-data/mysql/conf</span></span>
+<span class="line"><span>mkdir -p /root/docker-data/mysql/logs</span></span>
+<span class="line"><span>mkdir -p /root/docker-data/mysql/data</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>启动：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker run \</span></span>
+<span class="line"><span>-p 3308:3306 \</span></span>
+<span class="line"><span>--name n_mysql8 \</span></span>
+<span class="line"><span>--privileged=true \</span></span>
+<span class="line"><span>-v /root/docker-data/mysql/conf:/etc/mysql/conf.d \</span></span>
+<span class="line"><span>-v /root/docker-data/mysql/logs:/var/log/mysql \</span></span>
+<span class="line"><span>-v /root/docker-data/mysql/data:/var/lib/mysql \</span></span>
+<span class="line"><span>-e MYSQL_ROOT_PASSWORD=queque123 \</span></span>
+<span class="line"><span>-d mysql:8.0.20</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><a href="https://www.cnblogs.com/sheseido/p/12708864.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/sheseido/p/12708864.html</a></p>
+<p>适用于编排</p>
+<p><a href="https://www.cnblogs.com/liugp/p/17441936.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/liugp/p/17441936.html</a></p>
+<p>开启远程连接：</p>
+<p>进入mysql8容器：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker exec -it n_mysql8 /bin/bash</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>连接数据库，输入密码</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>mysql -u root -p</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>创建远程连接用户</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 创建远程连接</span></span>
+<span class="line"><span>create user 'umami-uu'@'%' identified by 'wapCatDog.' PASSWORD EXPIRE NEVER;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>grant all privileges on *.* to 'umami-uu'@'%';</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>flush privileges;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>参考：<a href="https://www.cnblogs.com/lfxx/p/17522877.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/lfxx/p/17522877.html</a></p>
+<p><a href="https://blog.csdn.net/u014282578/article/details/127920419" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/u014282578/article/details/127920419</a></p>
+<p><a href="https://developer.aliyun.com/article/1436396" target="_blank" rel="noopener noreferrer">https://developer.aliyun.com/article/1436396</a></p>
+<p>定制版本：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker run \</span></span>
+<span class="line"><span>-p 3308:3306 \</span></span>
+<span class="line"><span>--name n_mysql8 \</span></span>
+<span class="line"><span>--privileged=true \</span></span>
+<span class="line"><span>-v /root/docker-data/mysql/conf:/etc/mysql/conf.d \</span></span>
+<span class="line"><span>-v /root/docker-data/mysql/logs:/var/log/mysql \</span></span>
+<span class="line"><span>-v /root/docker-data/mysql/data:/var/lib/mysql \</span></span>
+<span class="line"><span>-e MYSQL_ROOT_PASSWORD=queque123 \</span></span>
+<span class="line"><span>-e MYSQL_USER: umami-uu</span></span>
+<span class="line"><span>-e MYSQL_PASSWORD: queque</span></span>
+<span class="line"><span>-d mysql:8.0.20</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>redis</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker pull redis:latest</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>启动</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker run --name n_redis \</span></span>
+<span class="line"><span>-p 8379:6379 \</span></span>
+<span class="line"><span>-v /root/docker-data/redis/redis.conf:/etc/redis/redis.conf  \</span></span>
+<span class="line"><span>-v /root/docker-data/redis/data:/data  \</span></span>
+<span class="line"><span>-d redis --requirepass 121212 \</span></span>
+<span class="line"><span>--appendonly yes</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>nginx</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker pull nginx:1.25.1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>启动：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker run -d \</span></span>
+<span class="line"><span>--restart always \</span></span>
+<span class="line"><span>--name n_nginx \</span></span>
+<span class="line"><span>-p 80:80 \</span></span>
+<span class="line"><span>-v /root/docker-data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \</span></span>
+<span class="line"><span>-v /root/docker-data/nginx/conf/conf.d:/etc/nginx/conf.d \</span></span>
+<span class="line"><span>-v /root/docker-data/nginx/log:/var/log/nginx \</span></span>
+<span class="line"><span>-v /root/docker-data/nginx/html:/usr/share/nginx/html \</span></span>
+<span class="line"><span>nginx:1.25.1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>uptime</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker pull louislam/uptime-kuma:1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>创建目录：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>mkdir  -p /root/docker-data/uptime-kuma</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>启动：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker run -d \</span></span>
+<span class="line"><span>--restart=always \</span></span>
+<span class="line"><span>--name uptime-kuma \</span></span>
+<span class="line"><span>-p 7001:3001 \</span></span>
+<span class="line"><span>-v /root/docker-data/uptime-kuma:/app/data \</span></span>
+<span class="line"><span>louislam/uptime-kuma:1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>nginx proxy manager配置uptime，注意点是，使用代理，需要启动 websocket</p>
+<p><a href="https://github.com/louislam/uptime-kuma/wiki/Reverse-Proxy#nginx" target="_blank" rel="noopener noreferrer">https://github.com/louislam/uptime-kuma/wiki/Reverse-Proxy#nginx</a></p>
+<p>watch：</p>
+<p><a href="https://www.youtube.com/watch?app=desktop&amp;v=rj7DZdWMK2k&amp;t=1700s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?app=desktop&amp;v=rj7DZdWMK2k&amp;t=1700s</a></p>
+<p>docker compose方式启动：</p>
+<p><a href="https://fossengineer.com/selfhosting-uptime-Kuma-docker/" target="_blank" rel="noopener noreferrer">https://fossengineer.com/selfhosting-uptime-Kuma-docker/</a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -4083,6 +4273,7 @@ SampleXxlJob类：</p>
 <p><a href="https://blog.csdn.net/q283614346/article/details/138790776" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/q283614346/article/details/138790776</a></p>
 <p><a href="https://blog.csdn.net/xiaouncle/article/details/136910057" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/xiaouncle/article/details/136910057</a></p>
 <p><a href="https://blog.csdn.net/m0_51233386/article/details/127961763" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/m0_51233386/article/details/127961763</a></p>
+<p><a href="https://yeasy.gitbook.io/docker_practice/install/ubuntu" target="_blank" rel="noopener noreferrer">Ubuntu安装docker </a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -5062,6 +5253,42 @@ idea就会提示找到svn对应的.exe</p>
 还有，如果之前改为了eclipse，后面换了一个项目，建议及时改回Javac，然后后面编译总是报错，也找到问题所在，那就很难受了。</p>
 <p>不过呢，对于现在SpringBoot项目一般不会出现这样的问题。</p>
 </blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Lottery项目总结</title>
+      <link>https://blog.lxip.top/java/pracprojects/Lottery%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/Lottery%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Lottery项目总结</source>
+      <description>2023年7月到2023年11月 抽奖系统总结 经过三个月的零散学习，写项目，终于将项目写完了。这个过程也让我学习到许多解决问题的能力，目前就是多尝试。 从基础的搭建DDD项目开始，看文档、查资料、向大家提问，一步一步的写代码，刚开始我并不会从哪里开始写代码，有人说先从入口开始写，有人说从测试类入口开始写，也有人说从接口开始写，然后缺什么就补什么。就这...</description>
+      <category>实战项目</category>
+      <pubDate>Mon, 20 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>2023年7月到2023年11月</p>
+<p>抽奖系统总结</p>
+</blockquote>
+<p>经过三个月的零散学习，写项目，终于将项目写完了。这个过程也让我学习到许多解决问题的能力，目前就是多尝试。</p>
+<p>从基础的搭建DDD项目开始，看文档、查资料、向大家提问，一步一步的写代码，刚开始我并不会从哪里开始写代码，有人说先从入口开始写，有人说从测试类入口开始写，也有人说从接口开始写，然后缺什么就补什么。就这样我一步一步的尝试，写了几章又停歇了几天甚至一周吧，然后再继续写，这时前面的可能忘记了，边写边熟悉。经过了如此反复，才渐渐完成。抽奖模块中使用到分库分表，但这分库分表没看明白，就直接使用lottery提供的自研分库分表组件了，也没花时间写一写。再到在这DDD架构分层applicantion、common、domain、infrastructure、Interfaces、rpc（对外暴露接口）这几层接口，实现领域驱动的充血模型，mvc则是贫血模型，简单理解mvc就是多个人穿一条裤子，ddd则是一个人穿一条裤子。</p>
+<p>在这其中我也简单了解到分库分表中使用抖动算法，使用到决策树，还有什么忘记了。</p>
+<p>用到策略模式，还使用抽象类，让方法进行复用。</p>
+<p>模板模式一般用于处理抽奖流程，</p>
+<p>id策略，不同的业务使用不同的策略id，像表中数据比较多的就使用id表长的，貌似是雪花算法。</p>
+<p>活动流程编排，后续就是对业务的处理</p>
+<p>业务上就是对活动的管理，比如编辑活动后就需要审核，审核通过后才能开启活动，可能还存在提审等流程，<br>
+而</p>
+<p>规则引擎则是对不同用户群体进行划分，也就是不同用户群体抽奖的奖品不同、策略也不同。</p>
+<p>后面还使用到门面接口来封装和转换对象，转换使用到structmap</p>
+<p>再到后续抽奖接口写完了，就是编写后台、对接公众号回复抽奖、转盘方式抽奖，<br>
+后台主要是对库表中的活动管理、奖品管理，这部分主要是crud，也是需要完善的地方。<br>
+而公众号则就是需要增加用户唯一id的管理，对每个用户进行限制抽奖次数、用户群体等<br>
+转盘抽奖方式，首先得用户让用户进行注册，然后领取活动次数，才能进行抽奖，不然不能让其进行抽奖活动。</p>
+<p>像后台管理，一般都是调用lottery通过rpc暴露的接口，然后后台管理调用对应暴露的接口，这个过程用到了dubbo和nacos服务注册与发现，也就是后台管理中需要添加对应的dubbo依赖和配置，同样nacos也需要。</p>
+<p>redis主要是抽奖要么成功要么失败，这样的执行策略。<br>
+mq主要是抽奖成功后过一段时间更新库表，相当于延迟发奖让用户不用一直停留在抽奖界面等待。<br>
+也就是现在使用kafka中的提供者和消费者，而nacos则是管理这里的提供者和消费者以及一些服务的注册和发现。</p>
+<p>dubbo作用就是rpc服务调用</p>
+<p>之前一直使用zookeeper或者直连方式进行测试的。</p>
+<p>技术上使用到springboot、MyBatis、mysql、redis、xxl-job、dubbo、zookeeper、kafka、nacos</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -8625,6 +8852,214 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 ```
 ::: -->
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>Idea快捷键</title>
+      <link>https://blog.lxip.top/java/devtool/Idea%E5%BF%AB%E6%8D%B7%E9%94%AE.html</link>
+      <guid>https://blog.lxip.top/java/devtool/Idea%E5%BF%AB%E6%8D%B7%E9%94%AE.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Idea快捷键</source>
+      <description>常用快捷键 提示与代码生成部分 选择/移动/复制代码: 代码优化 查找与替换 阅读代码部分 快捷键大全 1、Ctrl相关 2、Alt相关 3、Shift相关 4、Ctrl + Alt相关 5、Ctrl + Shift相关 6、Alt + Shift相关 7、其他</description>
+      <category>tool</category>
+      <content:encoded><![CDATA[<h2>常用快捷键</h2>
+<p>提示与代码生成部分</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Alt + Enter  IDEA 根据光标所在问题，提供快速修复选择</span></span>
+<span class="line"><span>Ctrl + Alt + T 对选中的代码弹出环绕选项弹出层(try，if等语句包裹)</span></span>
+<span class="line"><span>Alt + Insert 代码自动生成，如生成对象的 set / get 方法，构造函数，toString() 等</span></span>
+<span class="line"><span>Ctrl + O 选择可重写的方法</span></span>
+<span class="line"><span>Ctrl + I 选择可实现的方法</span></span>
+<span class="line"><span>Ctrl + / 注释光标所在行代码，会根据当前不同文件类型使用不同的注释符号</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>选择/移动/复制代码:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Ctrl + W 递进式选择代码块</span></span>
+<span class="line"><span>ctrl+Shift+w   递进式取消选择代码块</span></span>
+<span class="line"><span>Ctrl + D 复制光标所在行 或 复制选择内容，并把复制内容插入光标位置下面</span></span>
+<span class="line"><span>Ctrl+Shift+↑或↓ : 移动当前行或代码结构</span></span>
+<span class="line"><span>Ctrl + Y 删除光标所在行 或 删除选中的行</span></span>
+<span class="line"><span>Ctrl + X 剪切光标所在行 或 剪切选择内容</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>代码优化</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Ctrl + Alt + O 优化导入的类，可以对当前文件和整个包目录使用</span></span>
+<span class="line"><span>Ctrl + Alt + L 格式化代码，可以对当前文件和整个包目录使用</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>查找与替换</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Ctrl + F 在当前文件进行文本查找</span></span>
+<span class="line"><span>Ctrl + Shift + F 根据输入内容查找整个项目 或 指定目录内文件</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Ctrl + R 在当前文件进行文本替换</span></span>
+<span class="line"><span>Ctrl + Shift + R 根据输入内容替换对应内容，范围为整个项目 或 指定目录内文件</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>阅读代码部分</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Ctrl + F12 弹出当前文件结构层(类的方法属性等)，可以在弹出的层上直接输入，进行筛选</span></span>
+<span class="line"><span>Ctrl + Q 光标所在的变量 / 类名 / 方法名等上面（也可以在提示补充的时候按），显示文档内容</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>快捷键大全</h2>
+<h3>1、Ctrl相关</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Ctrl + F 在当前文件进行文本查找 （必备）</span></span>
+<span class="line"><span>Ctrl + R 在当前文件进行文本替换 （必备）</span></span>
+<span class="line"><span>Ctrl + Z 撤销 （必备）</span></span>
+<span class="line"><span>Ctrl + Y 删除光标所在行 或 删除选中的行 （必备）</span></span>
+<span class="line"><span>Ctrl + X 剪切光标所在行 或 剪切选择内容</span></span>
+<span class="line"><span>Ctrl + C 复制光标所在行 或 复制选择内容</span></span>
+<span class="line"><span>Ctrl + D 复制光标所在行 或 复制选择内容，并把复制内容插入光标位置下面 （必备）</span></span>
+<span class="line"><span>Ctrl + W 递进式选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展选中范围 （必备）</span></span>
+<span class="line"><span>Ctrl + E 显示最近打开的文件记录列表</span></span>
+<span class="line"><span>Ctrl + N 根据输入的 类名 查找类文件</span></span>
+<span class="line"><span>Ctrl + G 在当前文件跳转到指定行处</span></span>
+<span class="line"><span>Ctrl + J 插入自定义动态代码模板</span></span>
+<span class="line"><span>Ctrl + P 方法参数提示显示</span></span>
+<span class="line"><span>Ctrl + Q 光标所在的变量 / 类名 / 方法名等上面（也可以在提示补充的时候按），显示文档内容</span></span>
+<span class="line"><span>Ctrl + U 前往当前光标所在的方法的父类的方法 / 接口定义</span></span>
+<span class="line"><span>Ctrl + B 进入光标所在的方法/变量的接口或是定义处，等效于 Ctrl + 左键单击</span></span>
+<span class="line"><span>Ctrl + K 版本控制提交项目，需要此项目有加入到版本控制才可用</span></span>
+<span class="line"><span>Ctrl + T 版本控制更新项目，需要此项目有加入到版本控制才可用</span></span>
+<span class="line"><span>Ctrl + H 显示当前类的层次结构</span></span>
+<span class="line"><span>Ctrl + O 选择可重写的方法</span></span>
+<span class="line"><span>Ctrl + I 选择可继承的方法</span></span>
+<span class="line"><span>Ctrl + + 展开代码</span></span>
+<span class="line"><span>Ctrl + - 折叠代码</span></span>
+<span class="line"><span>Ctrl + / 注释光标所在行代码，会根据当前不同文件类型使用不同的注释符号 （必备）</span></span>
+<span class="line"><span>Ctrl + [ 移动光标到当前所在代码的花括号开始位置</span></span>
+<span class="line"><span>Ctrl + ] 移动光标到当前所在代码的花括号结束位置</span></span>
+<span class="line"><span>Ctrl + F1 在光标所在的错误代码处显示错误信息</span></span>
+<span class="line"><span>Ctrl + F3 调转到所选中的词的下一个引用位置</span></span>
+<span class="line"><span>Ctrl + F4 关闭当前编辑文件</span></span>
+<span class="line"><span>Ctrl + F8 在 Debug 模式下，设置光标当前行为断点，如果当前已经是断点则去掉断点</span></span>
+<span class="line"><span>Ctrl + F9 执行 Make Project 操作</span></span>
+<span class="line"><span>Ctrl + F11 选中文件 / 文件夹，使用助记符设定 / 取消书签</span></span>
+<span class="line"><span>Ctrl + F12 弹出当前文件结构层，可以在弹出的层上直接输入，进行筛选</span></span>
+<span class="line"><span>Ctrl + Tab 编辑窗口切换，如果在切换的过程又加按上delete，则是关闭对应选中的窗口</span></span>
+<span class="line"><span>Ctrl + Enter 智能分隔行</span></span>
+<span class="line"><span>Ctrl + End 跳到文件尾</span></span>
+<span class="line"><span>Ctrl + Home 跳到文件头</span></span>
+<span class="line"><span>Ctrl + Space 基础代码补全，默认在 Windows 系统上被输入法占用，需要进行修改，建议修改为 ALT+/（必备）</span></span>
+<span class="line"><span>Ctrl + Delete 删除光标后面的单词或是中文句</span></span>
+<span class="line"><span>Ctrl + BackSpace 删除光标前面的单词或是中文句</span></span>
+<span class="line"><span>Ctrl + 1,2,3...9 定位到对应数值的书签位置</span></span>
+<span class="line"><span>Ctrl + 左键单击 在打开的文件标题上，弹出该文件路径</span></span>
+<span class="line"><span>Ctrl + 光标定位 按 Ctrl 不要松开，会显示光标所在的类信息摘要</span></span>
+<span class="line"><span>Ctrl + 左方向键 光标跳转到当前单词 / 中文句的左侧开头位置</span></span>
+<span class="line"><span>Ctrl + 右方向键 光标跳转到当前单词 / 中文句的右侧开头位置</span></span>
+<span class="line"><span>Ctrl + 前方向键 等效于鼠标滚轮向前效果</span></span>
+<span class="line"><span>Ctrl + 后方向键 等效于鼠标滚轮向后效果</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>2、Alt相关</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Alt + ` 显示版本控制常用操作菜单弹出层</span></span>
+<span class="line"><span>Alt + Q 弹出一个提示，显示当前类的声明 / 上下文信息</span></span>
+<span class="line"><span>Alt + F1 显示当前文件选择目标弹出层，弹出层中有很多目标可以进行选择</span></span>
+<span class="line"><span>Alt + F2 对于前面页面，显示各类浏览器打开目标选择弹出层</span></span>
+<span class="line"><span>Alt + F3 选中文本，逐个往下查找相同文本，并高亮显示</span></span>
+<span class="line"><span>Alt + F7 查找光标所在的方法 / 变量 / 类被调用的地方</span></span>
+<span class="line"><span>Alt + F8 在 Debug 的状态下，选中对象，弹出可输入计算表达式调试框，查看该输入内容的调试结果</span></span>
+<span class="line"><span>Alt + Home 定位 / 显示到当前文件的 Navigation Bar</span></span>
+<span class="line"><span>Alt + Enter IntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同 （必备）</span></span>
+<span class="line"><span>Alt + Insert 代码自动生成，如生成对象的 set / get 方法，构造函数，toString() 等（必备）</span></span>
+<span class="line"><span>Alt + 左方向键 按左方向切换当前已打开的文件视图</span></span>
+<span class="line"><span>Alt + 右方向键 按右方向切换当前已打开的文件视图</span></span>
+<span class="line"><span>Alt + 前方向键 当前光标跳转到当前文件的前一个方法名位置</span></span>
+<span class="line"><span>Alt + 后方向键 当前光标跳转到当前文件的后一个方法名位置</span></span>
+<span class="line"><span>Alt + 1,2,3...9 显示对应数值的选项卡，其中 1 是 Project 用得最多</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>3、Shift相关</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Shift + F1 如果有外部文档可以连接外部文档</span></span>
+<span class="line"><span>Shift + F2 跳转到上一个高亮错误 或 警告位置</span></span>
+<span class="line"><span>Shift + F3 在查找模式下，查找匹配上一个</span></span>
+<span class="line"><span>Shift + F4 对当前打开的文件，使用新Windows窗口打开，旧窗口保留</span></span>
+<span class="line"><span>Shift + F6 对文件 / 文件夹 重命名</span></span>
+<span class="line"><span>Shift + F7 在 Debug 模式下，智能步入。断点所在行上有多个方法调用，会弹出进入哪个方法</span></span>
+<span class="line"><span>Shift + F8 在 Debug 模式下，跳出，表现出来的效果跟 F9 一样</span></span>
+<span class="line"><span>Shift + F9 等效于点击工具栏的 Debug 按钮</span></span>
+<span class="line"><span>Shift + F10 等效于点击工具栏的 Run 按钮</span></span>
+<span class="line"><span>Shift + F11 弹出书签显示层</span></span>
+<span class="line"><span>Shift + Tab 取消缩进</span></span>
+<span class="line"><span>Shift + ESC 隐藏当前 或 最后一个激活的工具窗口</span></span>
+<span class="line"><span>Shift + End 选中光标到当前行尾位置</span></span>
+<span class="line"><span>Shift + Home 选中光标到当前行头位置</span></span>
+<span class="line"><span>Shift + Enter 开始新一行。光标所在行下空出一行，光标定位到新行位置</span></span>
+<span class="line"><span>Shift + 左键单击 在打开的文件名上按此快捷键，可以关闭当前打开文件</span></span>
+<span class="line"><span>Shift + 滚轮前后滚动 当前文件的横向滚动轴滚动</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>4、Ctrl + Alt相关</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Ctrl + Alt + L 格式化代码，可以对当前文件和整个包目录使用 （必备）</span></span>
+<span class="line"><span>Ctrl + Alt + O 优化导入的类，可以对当前文件和整个包目录使用 （必备）</span></span>
+<span class="line"><span>Ctrl + Alt + I 光标所在行 或 选中部分进行自动代码缩进，有点类似格式化</span></span>
+<span class="line"><span>Ctrl + Alt + T 对选中的代码弹出环绕选项弹出层</span></span>
+<span class="line"><span>Ctrl + Alt + J 弹出模板选择窗口，将选定的代码加入动态模板中</span></span>
+<span class="line"><span>Ctrl + Alt + H 调用层次</span></span>
+<span class="line"><span>Ctrl + Alt + B 在某个调用的方法名上使用会跳到具体的实现处，可以跳过接口</span></span>
+<span class="line"><span>Ctrl + Alt + V 快速引进变量</span></span>
+<span class="line"><span>Ctrl + Alt + Y 同步、刷新</span></span>
+<span class="line"><span>Ctrl + Alt + S 打开 IntelliJ IDEA 系统设置</span></span>
+<span class="line"><span>Ctrl + Alt + F7 显示使用的地方。寻找被该类或是变量被调用的地方，用弹出框的方式找出来</span></span>
+<span class="line"><span>Ctrl + Alt + F11 切换全屏模式</span></span>
+<span class="line"><span>Ctrl + Alt + Enter 光标所在行上空出一行，光标定位到新行</span></span>
+<span class="line"><span>Ctrl + Alt + Home 弹出跟当前文件有关联的文件弹出层</span></span>
+<span class="line"><span>Ctrl + Alt + Space 类名自动完成</span></span>
+<span class="line"><span>Ctrl + Alt + 左方向键 退回到上一个操作的地方 （必备）</span></span>
+<span class="line"><span>Ctrl + Alt + 右方向键 前进到上一个操作的地方 （必备）</span></span>
+<span class="line"><span>Ctrl + Alt + 前方向键 在查找模式下，跳到上个查找的文件</span></span>
+<span class="line"><span>Ctrl + Alt + 后方向键 在查找模式下，跳到下个查找的文件</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>5、Ctrl + Shift相关</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Ctrl + Shift + F 根据输入内容查找整个项目 或 指定目录内文件 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + R 根据输入内容替换对应内容，范围为整个项目 或 指定目录内文件 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + J 自动将下一行合并到当前行末尾 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + Z 取消撤销 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + W 递进式取消选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展取消选中范围 </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>（必备）</span></span>
+<span class="line"><span>Ctrl + Shift + N 通过文件名定位 / 打开文件 / 目录，打开目录需要在输入的内容后面多加一个正斜杠 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + U 对选中的代码进行大 / 小写轮流转换 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + T 对当前类生成单元测试类，如果已经存在的单元测试类则可以进行选择</span></span>
+<span class="line"><span>Ctrl + Shift + C 复制当前文件磁盘路径到剪贴板</span></span>
+<span class="line"><span>Ctrl + Shift + V 弹出缓存的最近拷贝的内容管理器弹出层</span></span>
+<span class="line"><span>Ctrl + Shift + E 显示最近修改的文件列表的弹出层</span></span>
+<span class="line"><span>Ctrl + Shift + H 显示方法层次结构</span></span>
+<span class="line"><span>Ctrl + Shift + B 跳转到类型声明处</span></span>
+<span class="line"><span>Ctrl + Shift + I 快速查看光标所在的方法 或 类的定义</span></span>
+<span class="line"><span>Ctrl + Shift + A 查找动作 / 设置</span></span>
+<span class="line"><span>Ctrl + Shift + / 代码块注释 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + [ 选中从光标所在位置到它的顶部中括号位置</span></span>
+<span class="line"><span>Ctrl + Shift + ] 选中从光标所在位置到它的底部中括号位置</span></span>
+<span class="line"><span>Ctrl + Shift + + 展开所有代码</span></span>
+<span class="line"><span>Ctrl + Shift + - 折叠所有代码</span></span>
+<span class="line"><span>Ctrl + Shift + F7 高亮显示所有该选中文本，按Esc高亮消失</span></span>
+<span class="line"><span>Ctrl + Shift + F8 在 Debug 模式下，指定断点进入条件</span></span>
+<span class="line"><span>Ctrl + Shift + F9 编译选中的文件 / 包 / Module</span></span>
+<span class="line"><span>Ctrl + Shift + F12 编辑器最大化</span></span>
+<span class="line"><span>Ctrl + Shift + Space 智能代码提示</span></span>
+<span class="line"><span>Ctrl + Shift + Enter 自动结束代码，行末自动添加分号 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + Backspace 退回到上次修改的地方</span></span>
+<span class="line"><span>Ctrl + Shift + 1,2,3...9 快速添加指定数值的书签</span></span>
+<span class="line"><span>Ctrl + Shift + 左键单击 把光标放在某个类变量上，按此快捷键可以直接定位到该类中 （必备）</span></span>
+<span class="line"><span>Ctrl + Shift + 左方向键 在代码文件上，光标跳转到当前单词 / 中文句的左侧开头位置，同时选中该单词 / 中文句</span></span>
+<span class="line"><span>Ctrl + Shift + 右方向键 在代码文件上，光标跳转到当前单词 / 中文句的右侧开头位置，同时选中该单词 / 中文句</span></span>
+<span class="line"><span>Ctrl + Shift + 左方向键 在光标焦点是在工具选项卡上，缩小选项卡区域</span></span>
+<span class="line"><span>Ctrl + Shift + 右方向键 在光标焦点是在工具选项卡上，扩大选项卡区域</span></span>
+<span class="line"><span>Ctrl + Shift + 前方向键 光标放在方法名上，将方法移动到上一个方法前面，调整方法排序</span></span>
+<span class="line"><span>Ctrl + Shift + 后方向键 光标放在方法名上，将方法移动到下一个方法前面，调整方法排序</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>6、Alt + Shift相关</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Alt + Shift + N 选择 / 添加 task</span></span>
+<span class="line"><span>Alt + Shift + F 显示添加到收藏夹弹出层 / 添加到收藏夹</span></span>
+<span class="line"><span>Alt + Shift + C 查看最近操作项目的变化情况列表</span></span>
+<span class="line"><span>Alt + Shift + I 查看项目当前文件</span></span>
+<span class="line"><span>Alt + Shift + F7 在 Debug 模式下，下一步，进入当前方法体内，如果方法体还有方法，则会进入该内嵌的方法中，依此循环</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>进入</span></span>
+<span class="line"><span>Alt + Shift + F9 弹出 Debug 的可选择菜单</span></span>
+<span class="line"><span>Alt + Shift + F10 弹出 Run 的可选择菜单</span></span>
+<span class="line"><span>Alt + Shift + 左键双击 选择被双击的单词 / 中文句，按住不放，可以同时选择其他单词 / 中文句</span></span>
+<span class="line"><span>Alt + Shift + 前方向键 移动光标所在行向上移动</span></span>
+<span class="line"><span>Alt + Shift + 后方向键 移动光标所在行向下移动</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>7、其他</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>F2 跳转到下一个高亮错误 或 警告位置 （必备）</span></span>
+<span class="line"><span>F3 在查找模式下，定位到下一个匹配处</span></span>
+<span class="line"><span>F4 编辑源</span></span>
+<span class="line"><span>F7 在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果该方法体还有方法，则不会进入该</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>内嵌的方法中</span></span>
+<span class="line"><span>F8 在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则不进入当前方法体内</span></span>
+<span class="line"><span>F9 在 Debug 模式下，恢复程序运行，但是如果该断点下面代码还有断点则停在下一个断点上</span></span>
+<span class="line"><span>F11 添加书签</span></span>
+<span class="line"><span>F12 回到前一个工具窗口</span></span>
+<span class="line"><span>Tab 缩进</span></span>
+<span class="line"><span>ESC 从工具窗口进入代码文件窗口</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Ctrl + Shift + Alt + V 无格式黏贴</span></span>
+<span class="line"><span>Ctrl + Shift + Alt + N 前往指定的变量 / 方法</span></span>
+<span class="line"><span>Ctrl + Shift + Alt + S 打开当前项目设置</span></span>
+<span class="line"><span>Ctrl + Shift + Alt + C 复制参考信息</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>Java8新特性</title>
