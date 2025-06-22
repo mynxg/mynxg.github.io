@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 23 Mar 2025 14:41:11 GMT</pubDate>
-    <lastBuildDate>Sun, 23 Mar 2025 14:41:11 GMT</lastBuildDate>
+    <pubDate>Sun, 22 Jun 2025 12:51:58 GMT</pubDate>
+    <lastBuildDate>Sun, 22 Jun 2025 12:51:58 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -4138,6 +4138,70 @@ SampleXxlJob类：</p>
 </ol>
 <p><code>-XX:+UseParallelGC</code></p>
 <p>让GC可以更快的执行。（只是JDK 5里对GC新增加的参数）</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>git 提交代码提示Unable to connect to relay host</title>
+      <link>https://blog.lxip.top/java/git/git%20%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BAUnable%20to%20connect%20to%20relay%20host.html</link>
+      <guid>https://blog.lxip.top/java/git/git%20%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BAUnable%20to%20connect%20to%20relay%20host.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">git 提交代码提示Unable to connect to relay host</source>
+      <description>背景 在使用git bash或Idea提交代码时，提示Unable to connect to relay host。 排查：ssh秘钥没有过期，google、github正常访问 报错 原因是： 在clash中修改了端口为13174，而配置（C:/Users/buttyme/.ssh/config）中并没有修改，导致提交失败。 解决方法 在 C:/U...</description>
+      <category>运维</category>
+      <pubDate>Sun, 28 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>背景</h2>
+<p>在使用git bash或Idea提交代码时，提示Unable to connect to relay host。</p>
+<p>排查：ssh秘钥没有过期，google、github正常访问</p>
+<h2>报错</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>FATAL: Unable to connect to relay host, errno=10061 Connection closed by UNKNOWN port 65535 Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>原因是：<br>
+在clash中修改了端口为13174，而配置（C:/Users/buttyme/.ssh/config）中并没有修改，导致提交失败。</p>
+<h2>解决方法</h2>
+<p>在 C:/Users/buttyme/.ssh/config 修改端口即可解决</p>
+<p>参考配置：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># github</span></span>
+<span class="line"><span>Host imnxg.github.com</span></span>
+<span class="line"><span>	HostName ssh.github.com </span></span>
+<span class="line"><span>	IdentityFile ~/.ssh/id_ed25519_github_liming</span></span>
+<span class="line"><span>	User liming</span></span>
+<span class="line"><span>	Port 443</span></span>
+<span class="line"><span>	ProxyCommand "D:\software\Git\mingw64\bin\connect.exe" -S 127.0.0.1:13174 %h %p</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>扩展</h2>
+<p>在项目目录下.git/config文件中最末添加</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[user]</span></span>
+<span class="line"><span>	name = liming</span></span>
+<span class="line"><span>	email = liming@gmail.com</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>用于指定本项目提交的用户名和邮箱</p>
+</blockquote>
+<p>或者使用命令方式局部配置：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 局部配置</span></span>
+<span class="line"><span>git config user.name "Your Name"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>git config user.email "your_email@gmail.com"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>在指定项目目录下执行该命令</p>
+</blockquote>
+<p>全局配置：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#设置全局配置</span></span>
+<span class="line"><span>git config –global user.name "Your Name"</span></span>
+<span class="line"><span>git config –global user.email "your_email@example.com"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#取消全局配置</span></span>
+<span class="line"><span>git config --global --unset user.name</span></span>
+<span class="line"><span>git config --global --unset user.email</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 查看局部配置</span></span>
+<span class="line"><span>git config --list</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#查看验证git账户</span></span>
+<span class="line"><span>git config user.name </span></span>
+<span class="line"><span>git config user.email</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>附件</h2>
+<p><a href="https://github.com/fncheng/Error/issues/1" target="_blank" rel="noopener noreferrer">https://github.com/fncheng/Error/issues/1</a></p>
+<blockquote>
+<p>Git报错: FATAL: Unable to connect to relay host, errno=10061</p>
+</blockquote>
+<p><a href="https://stackoverflow.com/questions/69645366/error-repository-not-found-fatal-could-not-read-from-remote-repository-pleas" target="_blank" rel="noopener noreferrer">ERROR: Repository not found. fatal: Could not read from remote repository. Please make sure you have the correct access rights and repo exists</a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -8429,7 +8493,10 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <span class="line"><span>	autocrlf = true</span></span>
 <span class="line"><span>[http]</span></span>
 <span class="line"><span>	sslVerify = false</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>效果如下图所示：</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>默认只生效第一个</p>
+</blockquote>
+<p>效果如下图所示：</p>
 <figure><figcaption>image-20221031235759564</figcaption></figure>
 <h3>查看账号列表：</h3>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git config --global --list</span></span></code></pre>
@@ -8454,6 +8521,23 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 </blockquote>
 <h2>附件</h2>
 <p><a href="https://blog.csdn.net/weixin_45586870/article/details/120446094" target="_blank" rel="noopener noreferrer">git单一账号使用教程</a></p>
+<h3>配置说明</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[user]</span></span>
+<span class="line"><span>	name = liming</span></span>
+<span class="line"><span>	email = liming@gmail.com</span></span>
+<span class="line"><span>[core]</span></span>
+<span class="line"><span>	autocrlf = true</span></span>
+<span class="line"><span>[http]</span></span>
+<span class="line"><span>	sslVerify = false</span></span>
+<span class="line"><span>[safe]</span></span>
+<span class="line"><span>	directory = D:/workspace/code/project1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>配置换行符的处理方式:</p>
+<ul>
+<li>autocrlf true 为自动转换换行符</li>
+<li>autocrlf input 禁用换行符的自动转换</li>
+</ul>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>
@@ -8464,7 +8548,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <description>查看分支 A: 查看本地分支 使用 git branch命令，如下：git branch *标识的是你当前所在的分支 imgimg B: 查看远程分支 命令如下：git branch -r imgimg C: 查看所有分支 命令如下：git branch -a imgimg 二、本地创建新分支 命令如下：git branch [分支名称] 例如：git...</description>
       <category>运维</category>
       <pubDate>Wed, 28 Sep 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
+      <content:encoded><![CDATA[<h2>查看分支</h2>
 <p>A: 查看本地分支<br>
 使用 git branch命令，如下：git branch<br>
 *标识的是你当前所在的分支</p>
