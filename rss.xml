@@ -6,16 +6,17 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 22 Jun 2025 12:51:58 GMT</pubDate>
-    <lastBuildDate>Sun, 22 Jun 2025 12:51:58 GMT</lastBuildDate>
+    <pubDate>Thu, 25 Dec 2025 15:57:19 GMT</pubDate>
+    <lastBuildDate>Thu, 25 Dec 2025 15:57:19 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
     <category>安装教程</category>
+    <category>Go</category>
+    <category>Go问题</category>
     <category>workflow</category>
     <category>archlinux</category>
     <category>hyprland</category>
-    <category>Go</category>
     <category>frp</category>
     <category>yudao-cloud</category>
     <category>lamp-cloud</category>
@@ -141,6 +142,82 @@
 <p>相关参数配置（daemon.json）解释</p>
 <p>Docker CE 软件仓库</p>
 <p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/" target="_blank" rel="noopener noreferrer">https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>docker镜像</title>
+      <link>https://blog.lxip.top/om/docker/docker-compose%E5%90%84%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://blog.lxip.top/om/docker/docker-compose%E5%90%84%E9%85%8D%E7%BD%AE.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">docker镜像</source>
+      <description>PostgreSQL 18 docker-compose-pgsql.yml 参考: https://www.goodsunlc.com/archives/542.html 参考2：https://www.fhai777.top/ 参考3: Linux +Docker 一键部署 PostgreSQL 创建docker-network网络 启动配置 停止...</description>
+      <category>docker</category>
+      <pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>PostgreSQL 18</h2>
+<p>docker-compose-pgsql.yml</p>
+<div class="language-yml line-numbers-mode" data-highlighter="shiki" data-ext="yml" data-title="yml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">services</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">  postgres</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    image</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">postgres:18</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    container_name</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">postgres-nxg</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    restart</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">unless-stopped</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">   </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    environment</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">POSTGRES_USER=admin</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">         </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">POSTGRES_PASSWORD=admin</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">POSTGRES_DB=appdb</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">POSTGRES_HOST_AUTH_METHOD=scram-sha-256</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">TZ=Asia/Shanghai</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">MAX_CONNECTIONS=200</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">PGDATA=/var/lib/postgresql/18/pgdata</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">   </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    volumes</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">./data:/var/lib/postgresql/18/pgdata</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">   </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    ports</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"5435:5432"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    networks</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">app-network</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    logging</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      driver</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"json-file"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      options</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">        max-size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"10m"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">        max-file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"3"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">networks</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">  app-network</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:  </span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    external</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">true</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>参考: <a href="https://www.goodsunlc.com/archives/542.html" target="_blank" rel="noopener noreferrer">https://www.goodsunlc.com/archives/542.html</a><br>
+参考2：<a href="https://www.fhai777.top/" target="_blank" rel="noopener noreferrer">https://www.fhai777.top/</a><br>
+参考3: <a href="https://www.youtube.com/watch?v=Dx6Pxk9tPMI" target="_blank" rel="noopener noreferrer">Linux +Docker 一键部署 PostgreSQL</a></p>
+</blockquote>
+<p>创建docker-network网络</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker network create  app-network</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>启动配置</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker compose -f docker-compose-pgsql.yml up -d</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>停止并删除数据库容器</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker compose -f docker-compose-pgsql.yml down</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>docker镜像</title>
+      <link>https://blog.lxip.top/om/docker/docker%E9%95%9C%E5%83%8F.html</link>
+      <guid>https://blog.lxip.top/om/docker/docker%E9%95%9C%E5%83%8F.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">docker镜像</source>
+      <description>docker 镜像源 https://docker.aityp.com/ https://status.daocloud.io/status/docker 镜像加速 https://github.com/DaoCloud/public-image-mirror 致力于提供连接全世界的稳定可靠安全的容器镜像服务。 附件 https://chromeweb...</description>
+      <category>docker</category>
+      <pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>docker 镜像源</h2>
+<p><a href="https://docker.aityp.com/r/docker.io/postgres" target="_blank" rel="noopener noreferrer">https://docker.aityp.com/</a></p>
+<p><a href="https://status.daocloud.io/status/docker" target="_blank" rel="noopener noreferrer">https://status.daocloud.io/status/docker</a></p>
+<blockquote>
+<p>镜像加速</p>
+</blockquote>
+<p><a href="https://github.com/DaoCloud/public-image-mirror" target="_blank" rel="noopener noreferrer">https://github.com/DaoCloud/public-image-mirror</a></p>
+<blockquote>
+<p>致力于提供连接全世界的稳定可靠安全的容器镜像服务。</p>
+</blockquote>
+<h2>附件</h2>
+<p><a href="https://chromewebstore.google.com/detail/docker-image-downloader/dfpojffmnkiglpjpjodlpmoejdcfobnd" target="_blank" rel="noopener noreferrer">https://chromewebstore.google.com/detail/docker-image-downloader/dfpojffmnkiglpjpjodlpmoejdcfobnd</a></p>
+<blockquote>
+<p>Docker Image Downloader</p>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>
@@ -421,6 +498,46 @@ POSTGRES_PASSWORD: 密码</p>
 <p><a href="https://www.youtube.com/watch?app=desktop&amp;v=rj7DZdWMK2k&amp;t=1700s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?app=desktop&amp;v=rj7DZdWMK2k&amp;t=1700s</a></p>
 <p>docker compose方式启动：</p>
 <p><a href="https://fossengineer.com/selfhosting-uptime-Kuma-docker/" target="_blank" rel="noopener noreferrer">https://fossengineer.com/selfhosting-uptime-Kuma-docker/</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>go启动项目失败</title>
+      <link>https://blog.lxip.top/go/go-use-question/go%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E5%A4%B1%E8%B4%A5.html</link>
+      <guid>https://blog.lxip.top/go/go-use-question/go%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E5%A4%B1%E8%B4%A5.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">go启动项目失败</source>
+      <description>go启动报错问题 在运行 go run main.go 命令时报错： 原因: 没有安装go相关的依赖 先在项目目录下使用 go mod tidy 命令安装依赖</description>
+      <category>Go</category>
+      <category>Go问题</category>
+      <pubDate>Tue, 12 Nov 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>go启动报错问题</h2>
+<p>在运行 go run main.go  命令时报错：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>go run main.go  </span></span>
+<span class="line"><span>main.go:8:2: missing go.sum entry for module providing package github.com/gin-gonic/gin; to add:  </span></span>
+<span class="line"><span>go mod download github.com/gin-gonic/gin  </span></span>
+<span class="line"><span>conf\conf.go:9:2: missing go.sum entry for module providing package github.com/joho/godotenv (imported by singo/conf); to add:  </span></span>
+<span class="line"><span>go get singo/conf  </span></span>
+<span class="line"><span>conf\i18n.go:7:2: missing go.sum entry for module providing package gopkg.in/yaml.v2 (imported by singo/conf); to add:  </span></span>
+<span class="line"><span>go get singo/conf  </span></span>
+<span class="line"><span>cache\cache.go:9:2: missing go.sum entry for module providing package github.com/redis/go-redis/v9 (imported by singo/cache); to add:  </span></span>
+<span class="line"><span>go get singo/cache  </span></span>
+<span class="line"><span>model\user.go:4:2: missing go.sum entry for module providing package golang.org/x/crypto/bcrypt (imported by singo/model); to add:  </span></span>
+<span class="line"><span>go get singo/model  </span></span>
+<span class="line"><span>model\init.go:9:2: missing go.sum entry for module providing package gorm.io/driver/mysql (imported by singo/model); to add:  </span></span>
+<span class="line"><span>go get singo/model  </span></span>
+<span class="line"><span>model\case.go:7:2: missing go.sum entry for module providing package gorm.io/gorm (imported by singo/model); to add:  </span></span>
+<span class="line"><span>go get singo/model  </span></span>
+<span class="line"><span>model\init.go:11:2: missing go.sum entry for module providing package gorm.io/gorm/logger (imported by singo/model); to add:  </span></span>
+<span class="line"><span>go get singo/model  </span></span>
+<span class="line"><span>api\user.go:7:2: missing go.sum entry for module providing package github.com/gin-contrib/sessions (imported by singo/api); to add:  </span></span>
+<span class="line"><span>go get singo/api  </span></span>
+<span class="line"><span>api\main.go:12:2: missing go.sum entry for module providing package github.com/go-playground/validator/v10 (imported by singo/api); to add:  </span></span>
+<span class="line"><span>go get singo/api  </span></span>
+<span class="line"><span>middleware\cors.go:6:2: missing go.sum entry for module providing package github.com/gin-contrib/cors (imported by singo/middleware); to add:  </span></span>
+<span class="line"><span>go get singo/middleware  </span></span>
+<span class="line"><span>middleware\session.go:5:2: missing go.sum entry for module providing package github.com/gin-contrib/sessions/cookie (imported by singo/middleware); to add:  </span></span>
+<span class="line"><span>go get singo/middleware</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>原因: 没有安装go相关的依赖</p>
+<p>先在项目目录下使用 go mod tidy 命令安装依赖</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -1123,6 +1240,150 @@ POSTGRES_PASSWORD: 密码</p>
 <figure><figcaption></figcaption></figure>
 <figure><figcaption></figcaption></figure>
 <p>这种方式会自动帮把go环境配置.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>go-常用命令</title>
+      <link>https://blog.lxip.top/go/go-learn/go-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</link>
+      <guid>https://blog.lxip.top/go/go-learn/go-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">go-常用命令</source>
+      <description>常用命令 其他命令 附件 Go 常用命令介绍 GO语言基础篇（三）- 一文吃透GO常用命令 Go语言基础(01)：入门应用简介及常用命令 Go模板： go-gin-api</description>
+      <category>Go</category>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>常用命令</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 打印go版本信息</span></span>
+<span class="line"><span>go version</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#编译并运行Go程序</span></span>
+<span class="line"><span>go run</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#编译Go程序包及其依赖</span></span>
+<span class="line"><span>go build </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 下载所有依赖包</span></span>
+<span class="line"><span>go mod tidy</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>其他命令</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 设置全局go依赖库代理</span></span>
+<span class="line"><span>go env -w GOPROXY="http://mirrors.aliyun.com/goproxy,direct"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 启动一个用于报告bug的工具</span></span>
+<span class="line"><span>go  bug</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>附件</h2>
+<p><a href="https://www.cnblogs.com/taoxiaoxin/p/17747338.html" title="发布于 2023-10-07 19:58" target="_blank" rel="noopener noreferrer">Go 常用命令介绍</a></p>
+<p><a href="https://juejin.cn/post/6992047185340661768" target="_blank" rel="noopener noreferrer">GO语言基础篇（三）- 一文吃透GO常用命令</a></p>
+<p><a href="https://learnku.com/articles/64668" target="_blank" rel="noopener noreferrer">Go语言基础(01)：入门应用简介及常用命令</a></p>
+<p>Go模板：</p>
+<p><a href="https://github.com/xinliangnote/go-gin-api" target="_blank" rel="noopener noreferrer">go-gin-api</a><br>
+<img src="https://cdn.nlark.com/yuque/0/2021/png/1309959/1637391949183-f7645280-1b21-4278-8df3-289366fd4451.png?x-oss-process=image%2Fformat%2Cwebp" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2021/png/1309959/1637391949183-f7645280-1b21-4278-8df3-289366fd4451.png?x-oss-process=image%2Fformat%2Cwebp" type="image/"/>
+    </item>
+    <item>
+      <title>go-常用命令</title>
+      <link>https://blog.lxip.top/go/go-learn/go-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B.html</link>
+      <guid>https://blog.lxip.top/go/go-learn/go-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">go-常用命令</source>
+      <description>go技术 golang Gin Echo 快速开发 快速搭建go框架模板 https://github.com/gourouting/singo Gin+Gorm开发Golang API快速开发脚手架 https://github.com/zaunist/go-react-template 案例：go-react-template.mdzz.uk 使用...</description>
+      <category>Go</category>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>go技术</h2>
+<p>golang</p>
+<p>Gin</p>
+<p><strong>Echo</strong></p>
+<h2>快速开发</h2>
+<blockquote>
+<p>快速搭建go框架模板</p>
+</blockquote>
+<p><a href="https://github.com/gourouting/singo" target="_blank" rel="noopener noreferrer">https://github.com/gourouting/singo</a></p>
+<blockquote>
+<p>Gin+Gorm开发Golang API快速开发脚手架</p>
+</blockquote>
+<p><a href="https://github.com/zaunist/go-react-template" target="_blank" rel="noopener noreferrer">https://github.com/zaunist/go-react-template</a></p>
+<p>案例：<a href="https://go-react-template.mdzz.uk/" title="https://go-react-template.mdzz.uk" target="_blank" rel="noopener noreferrer">go-react-template.mdzz.uk</a></p>
+<blockquote>
+<p>使用 Go (Echo) + React + TypeScript 构建的高性能 Web 应用模板</p>
+</blockquote>
+<p><a href="https://github.com/NextEraAbyss/gin-template" target="_blank" rel="noopener noreferrer">https://github.com/NextEraAbyss/gin-template</a></p>
+<blockquote>
+<p>Gin 用户API极简模板 | 基于Go语言Gin框架的极简API项目模板，仅保留用户相关功能，采用三层架构设计，提供安全、高性能的API开发基础。</p>
+</blockquote>
+<p><a href="https://github.com/xinliangnote/go-gin-api" target="_blank" rel="noopener noreferrer">https://github.com/xinliangnote/go-gin-api</a></p>
+<p>在线文档：<a href="https://www.yuque.com/xinliangnote/go-gin-api/ngc3x5" target="_blank" rel="noopener noreferrer">https://www.yuque.com/xinliangnote/go-gin-api/ngc3x5</a></p>
+<blockquote>
+<p>基于 Gin 进行模块化设计的 API 框架，封装了常用功能，使用简单，致力于进行快速的业务研发。比如，支持 cors 跨域、jwt 签名验证、zap 日志收集、panic 异常捕获、trace 链路追踪、prometheus 监控指标、swagger 文档生成、viper 配置文件解析、gorm 数据库组件、gormgen 代码生成工具、graphql 查询语言、errno 统一定义错误码、gRPC 的使用、cron 定时任务 等等。</p>
+</blockquote>
+<p><a href="https://github.com/miomiora/mio-init" target="_blank" rel="noopener noreferrer">https://github.com/miomiora/mio-init</a></p>
+<blockquote>
+<p>Go web 脚手架</p>
+</blockquote>
+<p><a href="https://github.com/championlong/go-quick-start" target="_blank" rel="noopener noreferrer">https://github.com/championlong/go-quick-start</a></p>
+<blockquote>
+<p>go项目脚手架</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>go-linux环境安装（推荐）</title>
+      <link>https://blog.lxip.top/go/install/go-install-linux.html</link>
+      <guid>https://blog.lxip.top/go/install/go-install-linux.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">go-linux环境安装（推荐）</source>
+      <description>一、go安装 下载 go linux版本 https://go.dev/dl/go1.25.5.linux-amd64.tar.gz 手动方式下载 命令方式下载： 二、环境配置 解压到指定目录/usr/local 将 /usr/local/go 目录添加至 PATH 环境变量 编辑~/.bashrc或/etc/profile文件，添加以下内容： 保存后...</description>
+      <category>Go</category>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>一、go安装</h2>
+<p>下载 go linux版本</p>
+<p><a href="https://go.dev/dl/go1.25.5.linux-amd64.tar.gz" target="_blank" rel="noopener noreferrer">https://go.dev/dl/go1.25.5.linux-amd64.tar.gz</a></p>
+<blockquote>
+<p>手动方式下载</p>
+</blockquote>
+<p>命令方式下载：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" data-title="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wget https://go.dev/dl/go1.25.5.linux-amd64.tar.gz  # 如果官网地址不稳定或访问不了，可以使用国内镜像源</span></span>
+<span class="line"><span># 国内镜像源（推荐）：中国科技大学镜像</span></span>
+<span class="line"><span>wget https://mirrors.ustc.edu.cn/golang/go1.25.5.linux-amd64.tar.gz</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 备选镜像源（阿里云）</span></span>
+<span class="line"><span>wget https://mirrors.aliyun.com/golang/go1.25.5.linux-amd64.tar.gz</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>二、环境配置</h2>
+<p><strong>解压到指定目录<code>/usr/local</code></strong></p>
+<div class="language-powershell line-numbers-mode" data-highlighter="shiki" data-ext="powershell" data-title="powershell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">tar </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">C </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">usr</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">local</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> -</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">xzf go1.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">25.5</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.linux</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">amd64.tar.gz</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>将 /usr/local/go 目录添加至 PATH 环境变量</p>
+<p>编辑~/.bashrc或/etc/profile文件，添加以下内容：</p>
+<div class="language-powershell line-numbers-mode" data-highlighter="shiki" data-ext="powershell" data-title="powershell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export GOROOT</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">usr</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">local</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">go</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export GOPATH</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#ABB2BF">$HOME</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">go  </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 推荐设置工作目录</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export PATH</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$PATH</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$GOROOT</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">bin:</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$GOPATH</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">bin</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>保存后运行以下命令生效：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" data-title="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>source /etc/profile</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>执行以下命令验证Go语言是否成功安装：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" data-title="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>go version</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>配置 Go 代理</h2>
+<p>在环境变量中增加代理</p>
+<p>GOPROXY</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">变量名：GOPROXY</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">变量值：https://</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">goproxy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">cn</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,direct</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">通过命令方式设置goproxy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">io代理</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> env -w GOPROXY</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"https://proxy.golang.com.cn,direct"</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 设置GO111MOUDLE</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> env -w GO111MODULE</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"on"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>目的：下载国外包比较慢，使用国内代理就比较快</p>
+</blockquote>
+<h3>常用的 go 代理</h3>
+<ul>
+<li>goproxy <a href="https://goproxy.io/zh/" target="_blank" rel="noopener noreferrer">https://goproxy.io/zh/</a></li>
+<li>阿里云 <a href="https://mirrors.aliyun.com/goproxy/" target="_blank" rel="noopener noreferrer">https://mirrors.aliyun.com/goproxy/</a></li>
+<li>七牛云 <a href="https://goproxy.cn/" target="_blank" rel="noopener noreferrer">https://goproxy.cn</a></li>
+</ul>
+<h2>其他操作系统</h2>
+<p>mac/linux 下配置 Go 代理</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 配置 GOPROXY 环境变量</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export GOPROXY</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">https://</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">goproxy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">io</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,direct</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 还可以设置不走 proxy 的私有仓库或组，多个用逗号相隔（可选）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export GOPRIVATE</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">git</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">mycompany</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.com,</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">github</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">com</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/my/</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">private</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>参考：<a href="https://goproxy.io/zh/" target="_blank" rel="noopener noreferrer">https://goproxy.io/zh/</a><br>
+<a href="https://zhuanlan.zhihu.com/p/1969933134599524792" target="_blank" rel="noopener noreferrer">Linux系统下安装go语言环境与配置全攻略</a></p>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>
