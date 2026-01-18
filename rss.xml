@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 25 Dec 2025 15:57:19 GMT</pubDate>
-    <lastBuildDate>Thu, 25 Dec 2025 15:57:19 GMT</lastBuildDate>
+    <pubDate>Sun, 18 Jan 2026 16:10:19 GMT</pubDate>
+    <lastBuildDate>Sun, 18 Jan 2026 16:10:19 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -200,7 +200,7 @@
       <link>https://blog.lxip.top/om/docker/docker%E9%95%9C%E5%83%8F.html</link>
       <guid>https://blog.lxip.top/om/docker/docker%E9%95%9C%E5%83%8F.html</guid>
       <source url="https://blog.lxip.top/rss.xml">docker镜像</source>
-      <description>docker 镜像源 https://docker.aityp.com/ https://status.daocloud.io/status/docker 镜像加速 https://github.com/DaoCloud/public-image-mirror 致力于提供连接全世界的稳定可靠安全的容器镜像服务。 附件 https://chromeweb...</description>
+      <description>docker 镜像源 https://docker.aityp.com/ https://status.daocloud.io/status/docker 镜像加速 https://github.com/DaoCloud/public-image-mirror 致力于提供连接全世界的稳定可靠安全的容器镜像服务。 https://hub.pixiuio....</description>
       <category>docker</category>
       <pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>docker 镜像源</h2>
@@ -213,6 +213,11 @@
 <blockquote>
 <p>致力于提供连接全世界的稳定可靠安全的容器镜像服务。</p>
 </blockquote>
+<p><a href="https://hub.pixiuio.com/search/explore" target="_blank" rel="noopener noreferrer">https://hub.pixiuio.com/search/explore</a></p>
+<blockquote>
+<p>搜索，安装和发布云原生镜像，自定义仓库对接和个人镜像同步</p>
+</blockquote>
+<p><a href="https://docker.aityp.com/" target="_blank" rel="noopener noreferrer">https://docker.aityp.com/</a></p>
 <h2>附件</h2>
 <p><a href="https://chromewebstore.google.com/detail/docker-image-downloader/dfpojffmnkiglpjpjodlpmoejdcfobnd" target="_blank" rel="noopener noreferrer">https://chromewebstore.google.com/detail/docker-image-downloader/dfpojffmnkiglpjpjodlpmoejdcfobnd</a></p>
 <blockquote>
