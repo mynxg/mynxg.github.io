@@ -6,10 +6,13 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 27 Jan 2026 15:15:10 GMT</pubDate>
-    <lastBuildDate>Tue, 27 Jan 2026 15:15:10 GMT</lastBuildDate>
+    <pubDate>Sun, 29 Mar 2026 10:16:07 GMT</pubDate>
+    <lastBuildDate>Sun, 29 Mar 2026 10:16:07 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>教程</category>
+    <category>后端</category>
+    <category>运维</category>
     <category>docker</category>
     <category>安装教程</category>
     <category>Go</category>
@@ -20,7 +23,6 @@
     <category>frp</category>
     <category>yudao-cloud</category>
     <category>lamp-cloud</category>
-    <category>运维</category>
     <category>xxl-job</category>
     <category>项目整合</category>
     <category>Knife4j</category>
@@ -50,8 +52,72 @@
     <category>Java</category>
     <category>捣鼓</category>
     <category>java</category>
-    <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>Java 证书批量导入和更新</title>
+      <link>https://blog.lxip.top/java/cookbook/Java%E8%AF%81%E4%B9%A6%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%92%8C%E6%9B%B4%E6%96%B0.html</link>
+      <guid>https://blog.lxip.top/java/cookbook/Java%E8%AF%81%E4%B9%A6%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%92%8C%E6%9B%B4%E6%96%B0.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Java 证书批量导入和更新</source>
+      <description>Java 证书批量导入和更新 单个证书导入命令 JDK cacerts 文件位置 不同版本 JDK 的 cacerts 路径： JDK 8 及更早版本： $JAVA_HOME/jre/lib/security/cacerts JDK 9+ 高版本： $JAVA_HOME/lib/security/cacerts 批量导入 Mozilla CA 证书 证...</description>
+      <category>教程</category>
+      <category>后端</category>
+      <category>运维</category>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>Java 证书批量导入和更新</h2>
+<h3>单个证书导入命令</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>keytool -importcert -trustcacerts \</span></span>
+<span class="line"><span>  -alias newca \</span></span>
+<span class="line"><span>  -keystore C:\Java\jdk1.8.0_461\jre\lib\security\cacerts \</span></span>
+<span class="line"><span>  -storepass changeit \</span></span>
+<span class="line"><span>  -file newca.crt \</span></span>
+<span class="line"><span>  -noprompt</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>JDK cacerts 文件位置</h3>
+<p><strong>不同版本 JDK 的 cacerts 路径：</strong></p>
+<ul>
+<li><strong>JDK 8 及更早版本：</strong>&nbsp;<code>$JAVA_HOME/jre/lib/security/cacerts</code></li>
+<li><strong>JDK 9+ 高版本：</strong>&nbsp;<code>$JAVA_HOME/lib/security/cacerts</code></li>
+</ul>
+<h3>批量导入 Mozilla CA 证书</h3>
+<p><strong>证书来源：</strong></p>
+<ul>
+<li>Mozilla CA 证书包：<a href="https://curl.se/docs/caextract.html" target="_blank" rel="noopener noreferrer">https://curl.se/docs/caextract.html</a></li>
+<li>包含从 Mozilla 提取的所有受信任 CA 证书</li>
+</ul>
+<p><strong>批量导入方法：</strong></p>
+<ol>
+<li>
+<p><strong>直接替换 cacerts 文件</strong>（推荐用于批量更新）</p>
+<ul>
+<li>下载 Mozilla CA 证书包</li>
+<li>转换为 JKS 格式的 cacerts 文件</li>
+<li>替换 JDK 自带的 cacerts 文件</li>
+</ul>
+</li>
+<li>
+<p><strong>使用脚本批量导入</strong></p>
+</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 示例：循环导入多个证书</span></span>
+<span class="line"><span>for cert in *.crt; do</span></span>
+<span class="line"><span>  keytool -importcert -trustcacerts \</span></span>
+<span class="line"><span>    -alias $(basename $cert .crt) \</span></span>
+<span class="line"><span>    -keystore $JAVA_HOME/lib/security/cacerts \</span></span>
+<span class="line"><span>    -storepass changeit \</span></span>
+<span class="line"><span>    -file $cert \</span></span>
+<span class="line"><span>    -noprompt</span></span>
+<span class="line"><span>done</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>Linux 系统级证书更新</h3>
+<p><strong>在 RHEL/CentOS/Fedora 系统上：</strong></p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cp rootCA.crt /usr/share/pki/ca-trust-source/anchors/ &amp;&amp; update-ca-trust</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>这会更新系统级别的证书信任库，但不会自动影响 Java 的 cacerts。</p>
+<h3>注意事项</h3>
+<ul>
+<li>默认密码是&nbsp;<code>changeit</code></li>
+<li>备份原 cacerts 文件再修改</li>
+<li>某些应用可能使用自定义的 truststore，需单独配置</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>Rocky Linux 安装docker</title>
       <link>https://blog.lxip.top/om/docker/Rocky%20Linux%20%E5%AE%89%E8%A3%85docker.html</link>
@@ -218,6 +284,10 @@
 <p>搜索，安装和发布云原生镜像，自定义仓库对接和个人镜像同步</p>
 </blockquote>
 <p><a href="https://docker.aityp.com/" target="_blank" rel="noopener noreferrer">https://docker.aityp.com/</a></p>
+<p><a href="https://bigairport-mirror.com/" target="_blank" rel="noopener noreferrer">https://bigairport-mirror.com/</a></p>
+<blockquote>
+<p>镜像源</p>
+</blockquote>
 <h2>附件</h2>
 <p><a href="https://chromewebstore.google.com/detail/docker-image-downloader/dfpojffmnkiglpjpjodlpmoejdcfobnd" target="_blank" rel="noopener noreferrer">https://chromewebstore.google.com/detail/docker-image-downloader/dfpojffmnkiglpjpjodlpmoejdcfobnd</a></p>
 <blockquote>
